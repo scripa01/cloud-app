@@ -8,7 +8,7 @@ plugins {
 }
 
 group = "md.utm"
-version = "1.0.3-SNAPSHOT"
+version = "1.0.5-SNAPSHOT"
 
 java {
     sourceCompatibility = JavaVersion.VERSION_17

@@ -1,0 +1,26 @@
+./gradlew bootJar
+docker build -t scripa01/cloud-app:1.0.4 .
+docker push scripa01/cloud-app:1.0.4
+kubectl set image deployment/cloud-app cloud-app=scripa01/cloud-app:1.0.4
+									  comment
+kubectl set image deployment/cloud-app cloud-app=scripa01/cloud-app:1.0.5 --record
+
+
+
+kubectl port-forward -n monitoring svc/monitoring-grafana 3000:80
+grafana
+http://localhost:3000
+Логин: admin
+Пароль: prom-operator
+
+kubectl port-forward -n monitoring svc/monitoring-kube-prometheus-prometheus 9090:9090
+prometheus
+http://localhost:9090
+
+Dashboard → Import
+6417 Actuator
+http://localhost:3000/goto/EJhrnHaHR?orgId=1
+11074 Prometheus
+http://localhost:3000/goto/aOUj7N-HR?orgId=1
+
+curl -sSL -o metrics-server.yaml \  https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
