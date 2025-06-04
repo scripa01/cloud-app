@@ -25,7 +25,7 @@ spec:
     spec:
       containers:
         - name: cloud-app
-          image: scripa01/cloud-app:1.0.6
+          image: scripa01/cloud-app:latest
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080

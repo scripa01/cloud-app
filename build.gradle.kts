@@ -35,7 +35,3 @@ tasks.withType<KotlinCompile> {
 tasks.withType<Test> {
     useJUnitPlatform()
 }
-tasks.named<Jar>("jar") {
-    archiveBaseName.set("cloud-app")
-    archiveVersion.set("")
-}
