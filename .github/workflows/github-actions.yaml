@@ -22,6 +22,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build and push Docker image
+        shell: bash
         run: |
           docker build -t $IMAGE_NAME:$TAG .
           docker push $IMAGE_NAME:$TAG
