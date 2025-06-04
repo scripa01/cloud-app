@@ -8,7 +8,6 @@ plugins {
 }
 
 group = "md.utm"
-version = "1.0.6-SNAPSHOT"
 
 java {
     sourceCompatibility = JavaVersion.VERSION_17
@@ -35,4 +34,8 @@ tasks.withType<KotlinCompile> {
 
 tasks.withType<Test> {
     useJUnitPlatform()
+}
+tasks.named<Jar>("jar") {
+    archiveBaseName.set("cloud-app")
+    archiveVersion.set("")
 }
