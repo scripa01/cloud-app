@@ -5,7 +5,7 @@ metadata:
   labels:
     app: cloud-app
 spec:
-  revisionHistoryLimit: 5
+  revisionHistoryLimit: 3
   replicas: 2
   strategy:
     type: RollingUpdate
@@ -33,11 +33,11 @@ spec:
               protocol: TCP
           resources:
             requests:
-              cpu: "100m"
-              memory: "128Mi"
+              cpu: 100m
+              memory: 128Mi
             limits:
-              cpu: "500m"
-              memory: "512Mi"
+              cpu: 500m
+              memory: 512Mi
           env:
             - name: JAVA_OPTS
               value: "-Xmx256m"
