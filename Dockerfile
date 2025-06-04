@@ -3,7 +3,7 @@ FROM eclipse-temurin:17-jdk-jammy AS builder
 WORKDIR /app
 
 
-COPY build/libs/cloud-app-1.0.5-SNAPSHOT.jar app.jar
+COPY build/libs/cloud-app-1.0.6-SNAPSHOT.jar app.jar
 
 
 FROM eclipse-temurin:17-jre-jammy

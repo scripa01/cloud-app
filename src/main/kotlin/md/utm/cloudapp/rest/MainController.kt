@@ -8,6 +8,6 @@ class MainController {
 
     @GetMapping("/")
     fun main(): String {
-        return "I am on 5 version"
+        return "I am on 6 version"
     }
 }
