@@ -1,0 +1,3536 @@
+[2025-06-04 07:21:01Z INFO HostContext] No proxy settings were found based on environmental variables (http_proxy/https_proxy/HTTP_PROXY/HTTPS_PROXY)
+[2025-06-04 07:21:01Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:01Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:01Z INFO HostContext] Well known config file 'Credentials': 'Z:\cloud-app\actions-runner\.credentials'
+[2025-06-04 07:21:01Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:01Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:01Z INFO HostContext] Well known config file 'Runner': 'Z:\cloud-app\actions-runner\.runner'
+[2025-06-04 07:21:01Z INFO Worker] Version: 2.324.0
+[2025-06-04 07:21:01Z INFO Worker] Commit: da3412efd49b1cf1a0fbdcbcee4e4ac4cc2177c8
+[2025-06-04 07:21:01Z INFO Worker] Culture: ru-RU
+[2025-06-04 07:21:01Z INFO Worker] UI Culture: en-US
+[2025-06-04 07:21:01Z INFO Worker] Waiting to receive the job message from the channel.
+[2025-06-04 07:21:01Z INFO ProcessChannel] Receiving message of length 17707, with hash '185c629ff70f8b4ad9728a1f32fd9e785d3efe3335b0dc802129f1934fe24025'
+[2025-06-04 07:21:01Z INFO Worker] Message received.
+[2025-06-04 07:21:01Z INFO Worker] Job message:
+ {
+  "environmentVariables": [
+    {
+      "type": 2,
+      "file": 1,
+      "line": 9,
+      "col": 3,
+      "map": [
+        {
+          "key": {
+            "type": 0,
+            "file": 1,
+            "line": 9,
+            "col": 3,
+            "lit": "IMAGE_NAME"
+          },
+          "value": {
+            "type": 0,
+            "file": 1,
+            "line": 9,
+            "col": 15,
+            "lit": "***/cloud-app"
+          }
+        },
+        {
+          "key": {
+            "type": 0,
+            "file": 1,
+            "line": 10,
+            "col": 3,
+            "lit": "TAG"
+          },
+          "value": {
+            "type": 0,
+            "file": 1,
+            "line": 10,
+            "col": 8,
+            "lit": "latest"
+          }
+        }
+      ]
+    }
+  ],
+  "fileTable": [
+    ".github/workflows/github-actions.yaml"
+  ],
+  "mask": [
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    }
+  ],
+  "steps": [
+    {
+      "type": "action",
+      "reference": {
+        "type": "repository",
+        "name": "actions/checkout",
+        "ref": "v3",
+        "repositoryType": "GitHub"
+      },
+      "contextName": "__actions_checkout",
+      "condition": "success()",
+      "id": "8a314f67-866c-464a-bfc2-af9b49f3e24f",
+      "name": "__actions_checkout"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "repository",
+        "name": "docker/login-action",
+        "ref": "v2",
+        "repositoryType": "GitHub"
+      },
+      "contextName": "__docker_login-action",
+      "inputs": {
+        "type": 2,
+        "file": 1,
+        "line": 21,
+        "col": 11,
+        "map": [
+          {
+            "key": {
+              "type": 0,
+              "file": 1,
+              "line": 21,
+              "col": 11,
+              "lit": "username"
+            },
+            "value": {
+              "type": 3,
+              "file": 1,
+              "line": 21,
+              "col": 21,
+              "expr": "secrets.DOCKERHUB_USERNAME"
+            }
+          },
+          {
+            "key": {
+              "type": 0,
+              "file": 1,
+              "line": 22,
+              "col": 11,
+              "lit": "password"
+            },
+            "value": {
+              "type": 3,
+              "file": 1,
+              "line": 22,
+              "col": 21,
+              "expr": "secrets.DOCKERHUB_TOKEN"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "7ca5e346-ccad-49a9-8b08-69125c1604ef",
+      "name": "__docker_login-action"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "displayNameToken": {
+        "type": 0,
+        "file": 1,
+        "line": 24,
+        "col": 15,
+        "lit": "Build and push Docker image"
+      },
+      "contextName": "__run",
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 25,
+              "col": 14,
+              "lit": "docker build -t $IMAGE_NAME:$TAG .\ndocker push $IMAGE_NAME:$TAG"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "3d8796b3-ec31-4eec-9630-ca7b00928c49",
+      "name": "__run"
+    }
+  ],
+  "variables": {
+    "Actions.EnableHttpRedirects": {
+      "value": "true"
+    },
+    "DOCKERHUB_TOKEN": {
+      "value": "***",
+      "isSecret": true
+    },
+    "DOCKERHUB_USERNAME": {
+      "value": "***",
+      "isSecret": true
+    },
+    "DistributedTask.AddWarningToNode12Action": {
+      "value": "true"
+    },
+    "DistributedTask.AddWarningToNode16Action": {
+      "value": "true"
+    },
+    "DistributedTask.AllowRunnerContainerHooks": {
+      "value": "true"
+    },
+    "DistributedTask.DeprecateStepOutputCommands": {
+      "value": "true"
+    },
+    "DistributedTask.DetailUntarFailure": {
+      "value": "true"
+    },
+    "DistributedTask.EnableCompositeActions": {
+      "value": "true"
+    },
+    "DistributedTask.EnableJobServerQueueTelemetry": {
+      "value": "true"
+    },
+    "DistributedTask.EnhancedAnnotations": {
+      "value": "true"
+    },
+    "DistributedTask.ForceGithubJavascriptActionsToNode16": {
+      "value": "true"
+    },
+    "DistributedTask.ForceGithubJavascriptActionsToNode20": {
+      "value": "true"
+    },
+    "DistributedTask.LogTemplateErrorsAsDebugMessages": {
+      "value": "true"
+    },
+    "DistributedTask.MarkJobAsFailedOnWorkerCrash": {
+      "value": "true"
+    },
+    "DistributedTask.NewActionMetadata": {
+      "value": "true"
+    },
+    "DistributedTask.UploadStepSummary": {
+      "value": "true"
+    },
+    "DistributedTask.UseActionArchiveCache": {
+      "value": "true"
+    },
+    "DistributedTask.UseWhich2": {
+      "value": "true"
+    },
+    "RunService.FixEmbeddedIssues": {
+      "value": "true"
+    },
+    "actions_add_check_run_id_to_job_context": {
+      "value": "false"
+    },
+    "actions_display_helpful_actions_download_errors": {
+      "value": "false"
+    },
+    "actions_skip_retry_complete_job_upon_known_errors": {
+      "value": "true"
+    },
+    "actions_uses_cache_service_v2": {
+      "value": "true"
+    },
+    "github_token": {
+      "value": "***",
+      "isSecret": true
+    },
+    "system.from_run_service": {
+      "value": "true"
+    },
+    "system.github.job": {
+      "value": "build-and-push"
+    },
+    "system.github.launch_endpoint": {
+      "value": "https://launch.actions.githubusercontent.com"
+    },
+    "system.github.results_endpoint": {
+      "value": "https://results-receiver.actions.githubusercontent.com/"
+    },
+    "system.github.results_upload_with_sdk": {
+      "value": "true"
+    },
+    "system.github.token": {
+      "value": "***",
+      "isSecret": true
+    },
+    "system.github.token.permissions": {
+      "value": "{\"Contents\":\"read\",\"Metadata\":\"read\",\"Packages\":\"read\"}"
+    },
+    "system.orchestrationId": {
+      "value": "96745744-2e58-4a38-a4df-e9fd66620b99.build-and-push.__default"
+    },
+    "system.phaseDisplayName": {
+      "value": "build-and-push"
+    },
+    "system.runner.lowdiskspacethreshold": {
+      "value": "100"
+    },
+    "system.runnerEnvironment": {
+      "value": "self-hosted"
+    }
+  },
+  "messageType": "RunnerJobRequest",
+  "plan": {
+    "scopeIdentifier": "00000000-0000-0000-0000-000000000000",
+    "planType": "actions",
+    "version": 0,
+    "planId": "96745744-2e58-4a38-a4df-e9fd66620b99",
+    "planGroup": null,
+    "artifactUri": null,
+    "artifactLocation": null,
+    "definition": null,
+    "owner": null
+  },
+  "timeline": {
+    "id": "96745744-2e58-4a38-a4df-e9fd66620b99",
+    "changeId": 0,
+    "location": null
+  },
+  "jobId": "f64ab6aa-ef46-57c2-9099-dea868f4a703",
+  "jobDisplayName": "build-and-push",
+  "jobName": "__default",
+  "requestId": 0,
+  "lockedUntil": "0001-01-01T00:00:00",
+  "resources": {
+    "endpoints": [
+      {
+        "data": {
+          "ServerId": "",
+          "ServerName": "",
+          "CacheServerUrl": "https://artifactcache.actions.githubusercontent.com/ESlaa3iftPqjK7NPXG6VSk7T6ccaW0JKxrTlyluZJElv8XYnXx/",
+          "FeedStreamUrl": "wss://results-receiver.actions.githubusercontent.com/_ws/ingest.sock",
+          "ResultsServiceUrl": "https://results-receiver.actions.githubusercontent.com/",
+          "PipelinesServiceUrl": "https://pipelinesghubeus9.actions.githubusercontent.com/ESlaa3iftPqjK7NPXG6VSk7T6ccaW0JKxrTlyluZJElv8XYnXx/",
+          "GenerateIdTokenUrl": ""
+        },
+        "name": "SystemVssConnection",
+        "url": "https://run-actions-1-azure-eastus.actions.githubusercontent.com/79/",
+        "authorization": {
+          "parameters": {
+            "AccessToken": "***"
+          },
+          "scheme": "OAuth"
+        },
+        "isShared": false,
+        "isReady": true
+      }
+    ]
+  },
+  "contextData": {
+    "github": {
+      "t": 2,
+      "d": [
+        {
+          "k": "ref",
+          "v": "refs/heads/main"
+        },
+        {
+          "k": "sha",
+          "v": "da8854f8589bede995a9b019c932c1c82fc4ec35"
+        },
+        {
+          "k": "repository",
+          "v": "***/cloud-app"
+        },
+        {
+          "k": "repository_owner",
+          "v": "***"
+        },
+        {
+          "k": "repository_owner_id",
+          "v": "56929355"
+        },
+        {
+          "k": "repositoryUrl",
+          "v": "git://github.com/***/cloud-app.git"
+        },
+        {
+          "k": "run_id",
+          "v": "15436067944"
+        },
+        {
+          "k": "run_number",
+          "v": "7"
+        },
+        {
+          "k": "retention_days",
+          "v": "90"
+        },
+        {
+          "k": "run_attempt",
+          "v": "1"
+        },
+        {
+          "k": "artifact_cache_size_limit",
+          "v": "10"
+        },
+        {
+          "k": "repository_visibility",
+          "v": "public"
+        },
+        {
+          "k": "actor_id",
+          "v": "56929355"
+        },
+        {
+          "k": "actor",
+          "v": "***"
+        },
+        {
+          "k": "workflow",
+          "v": "Build and Push (latest)"
+        },
+        {
+          "k": "head_ref",
+          "v": ""
+        },
+        {
+          "k": "base_ref",
+          "v": ""
+        },
+        {
+          "k": "event_name",
+          "v": "workflow_dispatch"
+        },
+        {
+          "k": "server_url",
+          "v": "https://github.com"
+        },
+        {
+          "k": "api_url",
+          "v": "https://api.github.com"
+        },
+        {
+          "k": "graphql_url",
+          "v": "https://api.github.com/graphql"
+        },
+        {
+          "k": "ref_name",
+          "v": "main"
+        },
+        {
+          "k": "ref_protected",
+          "v": false
+        },
+        {
+          "k": "ref_type",
+          "v": "branch"
+        },
+        {
+          "k": "secret_source",
+          "v": "Actions"
+        },
+        {
+          "k": "event",
+          "v": {
+            "t": 2,
+            "d": [
+              {
+                "k": "inputs",
+                "v": null
+              },
+              {
+                "k": "ref",
+                "v": "refs/heads/main"
+              },
+              {
+                "k": "repository",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "allow_forking",
+                      "v": true
+                    },
+                    {
+                      "k": "archive_url",
+                      "v": "https://api.github.com/repos/***/cloud-app/{archive_format}{/ref}"
+                    },
+                    {
+                      "k": "archived",
+                      "v": false
+                    },
+                    {
+                      "k": "assignees_url",
+                      "v": "https://api.github.com/repos/***/cloud-app/assignees{/user}"
+                    },
+                    {
+                      "k": "blobs_url",
+                      "v": "https://api.github.com/repos/***/cloud-app/git/blobs{/sha}"
+                    },
+                    {
+                      "k": "branches_url",
+                      "v": "https://api.github.com/repos/***/cloud-app/branches{/branch}"
+                    },
+                    {
+                      "k": "clone_url",
+                      "v": "https://github.com/***/cloud-app.git"
+                    },
+                    {
+                      "k": "collaborators_url",
+                      "v": "https://api.github.com/repos/***/cloud-app/collaborators{/collaborator}"
+                    },
+                    {
+                      "k": "comments_url",
+                      "v": "https://api.github.com/repos/***/cloud-app/comments{/number}"
+                    },
+                    {
+                      "k": "commits_url",
+                      "v": "https://api.github.com/repos/***/cloud-app/commits{/sha}"
+                    },
+                    {
+                      "k": "compare_url",
+                      "v": "https://api.github.com/repos/***/cloud-app/compare/{base}...{head}"
+                    },
+                    {
+                      "k": "contents_url",
+                      "v": "https://api.github.com/repos/***/cloud-app/contents/{+path}"
+                    },
+                    {
+                      "k": "contributors_url",
+                      "v": "https://api.github.com/repos/***/cloud-app/contributors"
+                    },
+                    {
+                      "k": "created_at",
+                      "v": "2025-06-03T20:05:35Z"
+                    },
+                    {
+                      "k": "default_branch",
+                      "v": "main"
+                    },
+                    {
+                      "k": "deployments_url",
+                      "v": "https://api.github.com/repos/***/cloud-app/deployments"
+                    },
+                    {
+                      "k": "description",
+                      "v": null
+                    },
+                    {
+                      "k": "disabled",
+                      "v": false
+                    },
+                    {
+                      "k": "downloads_url",
+                      "v": "https://api.github.com/repos/***/cloud-app/downloads"
+                    },
+                    {
+                      "k": "events_url",
+                      "v": "https://api.github.com/repos/***/cloud-app/events"
+                    },
+                    {
+                      "k": "fork",
+                      "v": false
+                    },
+                    {
+                      "k": "forks",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "forks_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "forks_url",
+                      "v": "https://api.github.com/repos/***/cloud-app/forks"
+                    },
+                    {
+                      "k": "full_name",
+                      "v": "***/cloud-app"
+                    },
+                    {
+                      "k": "git_commits_url",
+                      "v": "https://api.github.com/repos/***/cloud-app/git/commits{/sha}"
+                    },
+                    {
+                      "k": "git_refs_url",
+                      "v": "https://api.github.com/repos/***/cloud-app/git/refs{/sha}"
+                    },
+                    {
+                      "k": "git_tags_url",
+                      "v": "https://api.github.com/repos/***/cloud-app/git/tags{/sha}"
+                    },
+                    {
+                      "k": "git_url",
+                      "v": "git://github.com/***/cloud-app.git"
+                    },
+                    {
+                      "k": "has_discussions",
+                      "v": false
+                    },
+                    {
+                      "k": "has_downloads",
+                      "v": true
+                    },
+                    {
+                      "k": "has_issues",
+                      "v": true
+                    },
+                    {
+                      "k": "has_pages",
+                      "v": false
+                    },
+                    {
+                      "k": "has_projects",
+                      "v": true
+                    },
+                    {
+                      "k": "has_wiki",
+                      "v": true
+                    },
+                    {
+                      "k": "homepage",
+                      "v": null
+                    },
+                    {
+                      "k": "hooks_url",
+                      "v": "https://api.github.com/repos/***/cloud-app/hooks"
+                    },
+                    {
+                      "k": "html_url",
+                      "v": "https://github.com/***/cloud-app"
+                    },
+                    {
+                      "k": "id",
+                      "v": 995648827.0
+                    },
+                    {
+                      "k": "is_template",
+                      "v": false
+                    },
+                    {
+                      "k": "issue_comment_url",
+                      "v": "https://api.github.com/repos/***/cloud-app/issues/comments{/number}"
+                    },
+                    {
+                      "k": "issue_events_url",
+                      "v": "https://api.github.com/repos/***/cloud-app/issues/events{/number}"
+                    },
+                    {
+                      "k": "issues_url",
+                      "v": "https://api.github.com/repos/***/cloud-app/issues{/number}"
+                    },
+                    {
+                      "k": "keys_url",
+                      "v": "https://api.github.com/repos/***/cloud-app/keys{/key_id}"
+                    },
+                    {
+                      "k": "labels_url",
+                      "v": "https://api.github.com/repos/***/cloud-app/labels{/name}"
+                    },
+                    {
+                      "k": "language",
+                      "v": "Shell"
+                    },
+                    {
+                      "k": "languages_url",
+                      "v": "https://api.github.com/repos/***/cloud-app/languages"
+                    },
+                    {
+                      "k": "license",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "key",
+                            "v": "mit"
+                          },
+                          {
+                            "k": "name",
+                            "v": "MIT License"
+                          },
+                          {
+                            "k": "node_id",
+                            "v": "MDc6TGljZW5zZTEz"
+                          },
+                          {
+                            "k": "spdx_id",
+                            "v": "MIT"
+                          },
+                          {
+                            "k": "url",
+                            "v": "https://api.github.com/licenses/mit"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "merges_url",
+                      "v": "https://api.github.com/repos/***/cloud-app/merges"
+                    },
+                    {
+                      "k": "milestones_url",
+                      "v": "https://api.github.com/repos/***/cloud-app/milestones{/number}"
+                    },
+                    {
+                      "k": "mirror_url",
+                      "v": null
+                    },
+                    {
+                      "k": "name",
+                      "v": "cloud-app"
+                    },
+                    {
+                      "k": "node_id",
+                      "v": "R_kgDOO1hlOw"
+                    },
+                    {
+                      "k": "notifications_url",
+                      "v": "https://api.github.com/repos/***/cloud-app/notifications{?since,all,participating}"
+                    },
+                    {
+                      "k": "open_issues",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "open_issues_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "owner",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "avatar_url",
+                            "v": "https://avatars.githubusercontent.com/u/56929355?v=4"
+                          },
+                          {
+                            "k": "events_url",
+                            "v": "https://api.github.com/users/***/events{/privacy}"
+                          },
+                          {
+                            "k": "followers_url",
+                            "v": "https://api.github.com/users/***/followers"
+                          },
+                          {
+                            "k": "following_url",
+                            "v": "https://api.github.com/users/***/following{/other_user}"
+                          },
+                          {
+                            "k": "gists_url",
+                            "v": "https://api.github.com/users/***/gists{/gist_id}"
+                          },
+                          {
+                            "k": "gravatar_id",
+                            "v": ""
+                          },
+                          {
+                            "k": "html_url",
+                            "v": "https://github.com/***"
+                          },
+                          {
+                            "k": "id",
+                            "v": 56929355.0
+                          },
+                          {
+                            "k": "login",
+                            "v": "***"
+                          },
+                          {
+                            "k": "node_id",
+                            "v": "MDQ6VXNlcjU2OTI5MzU1"
+                          },
+                          {
+                            "k": "organizations_url",
+                            "v": "https://api.github.com/users/***/orgs"
+                          },
+                          {
+                            "k": "received_events_url",
+                            "v": "https://api.github.com/users/***/received_events"
+                          },
+                          {
+                            "k": "repos_url",
+                            "v": "https://api.github.com/users/***/repos"
+                          },
+                          {
+                            "k": "site_admin",
+                            "v": false
+                          },
+                          {
+                            "k": "starred_url",
+                            "v": "https://api.github.com/users/***/starred{/owner}{/repo}"
+                          },
+                          {
+                            "k": "subscriptions_url",
+                            "v": "https://api.github.com/users/***/subscriptions"
+                          },
+                          {
+                            "k": "type",
+                            "v": "User"
+                          },
+                          {
+                            "k": "url",
+                            "v": "https://api.github.com/users/***"
+                          },
+                          {
+                            "k": "user_view_type",
+                            "v": "public"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "private",
+                      "v": false
+                    },
+                    {
+                      "k": "pulls_url",
+                      "v": "https://api.github.com/repos/***/cloud-app/pulls{/number}"
+                    },
+                    {
+                      "k": "pushed_at",
+                      "v": "2025-06-04T07:11:11Z"
+                    },
+                    {
+                      "k": "releases_url",
+                      "v": "https://api.github.com/repos/***/cloud-app/releases{/id}"
+                    },
+                    {
+                      "k": "size",
+                      "v": 52.0
+                    },
+                    {
+                      "k": "ssh_url",
+                      "v": "git@github.com:***/cloud-app.git"
+                    },
+                    {
+                      "k": "stargazers_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "stargazers_url",
+                      "v": "https://api.github.com/repos/***/cloud-app/stargazers"
+                    },
+                    {
+                      "k": "statuses_url",
+                      "v": "https://api.github.com/repos/***/cloud-app/statuses/{sha}"
+                    },
+                    {
+                      "k": "subscribers_url",
+                      "v": "https://api.github.com/repos/***/cloud-app/subscribers"
+                    },
+                    {
+                      "k": "subscription_url",
+                      "v": "https://api.github.com/repos/***/cloud-app/subscription"
+                    },
+                    {
+                      "k": "svn_url",
+                      "v": "https://github.com/***/cloud-app"
+                    },
+                    {
+                      "k": "tags_url",
+                      "v": "https://api.github.com/repos/***/cloud-app/tags"
+                    },
+                    {
+                      "k": "teams_url",
+                      "v": "https://api.github.com/repos/***/cloud-app/teams"
+                    },
+                    {
+                      "k": "topics",
+                      "v": {
+                        "t": 1
+                      }
+                    },
+                    {
+                      "k": "trees_url",
+                      "v": "https://api.github.com/repos/***/cloud-app/git/trees{/sha}"
+                    },
+                    {
+                      "k": "updated_at",
+                      "v": "2025-06-04T07:11:13Z"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://api.github.com/repos/***/cloud-app"
+                    },
+                    {
+                      "k": "visibility",
+                      "v": "public"
+                    },
+                    {
+                      "k": "watchers",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "watchers_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "web_commit_signoff_required",
+                      "v": false
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "sender",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "avatar_url",
+                      "v": "https://avatars.githubusercontent.com/u/56929355?v=4"
+                    },
+                    {
+                      "k": "events_url",
+                      "v": "https://api.github.com/users/***/events{/privacy}"
+                    },
+                    {
+                      "k": "followers_url",
+                      "v": "https://api.github.com/users/***/followers"
+                    },
+                    {
+                      "k": "following_url",
+                      "v": "https://api.github.com/users/***/following{/other_user}"
+                    },
+                    {
+                      "k": "gists_url",
+                      "v": "https://api.github.com/users/***/gists{/gist_id}"
+                    },
+                    {
+                      "k": "gravatar_id",
+                      "v": ""
+                    },
+                    {
+                      "k": "html_url",
+                      "v": "https://github.com/***"
+                    },
+                    {
+                      "k": "id",
+                      "v": 56929355.0
+                    },
+                    {
+                      "k": "login",
+                      "v": "***"
+                    },
+                    {
+                      "k": "node_id",
+                      "v": "MDQ6VXNlcjU2OTI5MzU1"
+                    },
+                    {
+                      "k": "organizations_url",
+                      "v": "https://api.github.com/users/***/orgs"
+                    },
+                    {
+                      "k": "received_events_url",
+                      "v": "https://api.github.com/users/***/received_events"
+                    },
+                    {
+                      "k": "repos_url",
+                      "v": "https://api.github.com/users/***/repos"
+                    },
+                    {
+                      "k": "site_admin",
+                      "v": false
+                    },
+                    {
+                      "k": "starred_url",
+                      "v": "https://api.github.com/users/***/starred{/owner}{/repo}"
+                    },
+                    {
+                      "k": "subscriptions_url",
+                      "v": "https://api.github.com/users/***/subscriptions"
+                    },
+                    {
+                      "k": "type",
+                      "v": "User"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://api.github.com/users/***"
+                    },
+                    {
+                      "k": "user_view_type",
+                      "v": "public"
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "workflow",
+                "v": ".github/workflows/github-actions.yaml"
+              }
+            ]
+          }
+        },
+        {
+          "k": "workflow_ref",
+          "v": "***/cloud-app/.github/workflows/github-actions.yaml@refs/heads/main"
+        },
+        {
+          "k": "workflow_sha",
+          "v": "da8854f8589bede995a9b019c932c1c82fc4ec35"
+        },
+        {
+          "k": "repository_id",
+          "v": "995648827"
+        },
+        {
+          "k": "triggering_actor",
+          "v": "***"
+        }
+      ]
+    },
+    "inputs": {
+      "t": 2
+    },
+    "matrix": null,
+    "needs": {
+      "t": 2
+    },
+    "strategy": {
+      "t": 2,
+      "d": [
+        {
+          "k": "fail-fast",
+          "v": true
+        },
+        {
+          "k": "job-index",
+          "v": 0.0
+        },
+        {
+          "k": "job-total",
+          "v": 1.0
+        },
+        {
+          "k": "max-parallel",
+          "v": 1.0
+        }
+      ]
+    },
+    "vars": {
+      "t": 2
+    }
+  },
+  "billingOwnerId": "U_kgDOA2SsSw"
+}
+[2025-06-04 07:21:01Z INFO JobRunner] Job ID f64ab6aa-ef46-57c2-9099-dea868f4a703
+[2025-06-04 07:21:01Z INFO ConfigurationStore] currentAssemblyLocation: Z:\cloud-app\actions-runner\bin\Runner.Worker.dll
+[2025-06-04 07:21:01Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:01Z INFO ConfigurationStore] binPath: Z:\cloud-app\actions-runner\bin
+[2025-06-04 07:21:01Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:01Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:01Z INFO ConfigurationStore] RootFolder: Z:\cloud-app\actions-runner
+[2025-06-04 07:21:01Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:01Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:01Z INFO HostContext] Well known config file 'Runner': 'Z:\cloud-app\actions-runner\.runner'
+[2025-06-04 07:21:01Z INFO ConfigurationStore] ConfigFilePath: Z:\cloud-app\actions-runner\.runner
+[2025-06-04 07:21:01Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:01Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:01Z INFO HostContext] Well known config file 'MigratedRunner': 'Z:\cloud-app\actions-runner\.runner_migrated'
+[2025-06-04 07:21:01Z INFO ConfigurationStore] MigratedConfigFilePath: Z:\cloud-app\actions-runner\.runner_migrated
+[2025-06-04 07:21:01Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:01Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:01Z INFO HostContext] Well known config file 'Credentials': 'Z:\cloud-app\actions-runner\.credentials'
+[2025-06-04 07:21:01Z INFO ConfigurationStore] CredFilePath: Z:\cloud-app\actions-runner\.credentials
+[2025-06-04 07:21:01Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:01Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:01Z INFO HostContext] Well known config file 'MigratedCredentials': 'Z:\cloud-app\actions-runner\.credentials_migrated'
+[2025-06-04 07:21:01Z INFO ConfigurationStore] MigratedCredFilePath: Z:\cloud-app\actions-runner\.credentials_migrated
+[2025-06-04 07:21:01Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:01Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:01Z INFO HostContext] Well known config file 'Service': 'Z:\cloud-app\actions-runner\.service'
+[2025-06-04 07:21:01Z INFO ConfigurationStore] ServiceConfigFilePath: Z:\cloud-app\actions-runner\.service
+[2025-06-04 07:21:01Z INFO ConfigurationStore] Read setting file: 307 chars
+[2025-06-04 07:21:01Z INFO JobRunner] Initializing launch client
+[2025-06-04 07:21:01Z INFO JobServerQueue] Initializing results client
+[2025-06-04 07:21:01Z INFO ResultServer] Creating websocket client ...wss://results-receiver.actions.githubusercontent.com/_ws/ingest.sock
+[2025-06-04 07:21:01Z INFO ResultServer] Attempting to start websocket client with delay 00:00:00.
+[2025-06-04 07:21:01Z INFO JobServerQueue] Start process web console line queue.
+[2025-06-04 07:21:01Z INFO JobServerQueue] Start process file upload queue.
+[2025-06-04 07:21:01Z INFO JobServerQueue] Start results file upload queue.
+[2025-06-04 07:21:01Z INFO JobServerQueue] Starting results-based upload queue...
+[2025-06-04 07:21:01Z INFO JobServerQueue] Start process timeline update queue.
+[2025-06-04 07:21:01Z INFO ExecutionContext] Initializing Job context
+[2025-06-04 07:21:01Z INFO ExecutionContext] Initialize GitHub context
+[2025-06-04 07:21:01Z INFO ExecutionContext] Initialize Env context
+[2025-06-04 07:21:01Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:01Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:01Z INFO HostContext] Well known directory 'Diag': 'Z:\cloud-app\actions-runner\_diag'
+[2025-06-04 07:21:01Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:01Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:01Z INFO HostContext] Well known directory 'Diag': 'Z:\cloud-app\actions-runner\_diag'
+[2025-06-04 07:21:01Z INFO JobRunner] Starting the job execution context.
+[2025-06-04 07:21:01Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:01Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:01Z INFO HostContext] Well known directory 'Work': 'Z:\cloud-app\actions-runner\_work'
+[2025-06-04 07:21:01Z INFO JobRunner] Validating directory permissions for: 'Z:\cloud-app\actions-runner\_work'
+[2025-06-04 07:21:01Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:01Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:01Z INFO HostContext] Well known directory 'Work': 'Z:\cloud-app\actions-runner\_work'
+[2025-06-04 07:21:01Z INFO HostContext] Well known directory 'Tools': 'Z:\cloud-app\actions-runner\_work\_tool'
+[2025-06-04 07:21:01Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:01Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:01Z INFO HostContext] Well known directory 'Work': 'Z:\cloud-app\actions-runner\_work'
+[2025-06-04 07:21:01Z INFO HostContext] Well known directory 'Temp': 'Z:\cloud-app\actions-runner\_work\_temp'
+[2025-06-04 07:21:01Z INFO JobRunner] Getting job extension.
+[2025-06-04 07:21:01Z INFO JobRunner] Initialize job. Getting all job steps.
+[2025-06-04 07:21:01Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:01Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:01Z INFO HostContext] Well known directory 'Diag': 'Z:\cloud-app\actions-runner\_diag'
+[2025-06-04 07:21:01Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:01Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:01Z INFO HostContext] Well known directory 'Diag': 'Z:\cloud-app\actions-runner\_diag'
+[2025-06-04 07:21:01Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:01Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:01Z INFO HostContext] Well known config file 'Credentials': 'Z:\cloud-app\actions-runner\.credentials'
+[2025-06-04 07:21:01Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:01Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:01Z INFO HostContext] Well known config file 'SetupInfo': 'Z:\cloud-app\actions-runner\.setup_info'
+[2025-06-04 07:21:01Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:01Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:01Z INFO HostContext] Well known directory 'Work': 'Z:\cloud-app\actions-runner\_work'
+[2025-06-04 07:21:01Z INFO PipelineDirectoryManager] Loading tracking config if exists: Z:\cloud-app\actions-runner\_work\_PipelineMapping\***/cloud-app\PipelineFolder.json
+[2025-06-04 07:21:01Z INFO PipelineDirectoryManager] Creating a new tracking config file.
+[2025-06-04 07:21:01Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:01Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:01Z INFO HostContext] Well known directory 'Work': 'Z:\cloud-app\actions-runner\_work'
+[2025-06-04 07:21:01Z INFO PipelineDirectoryManager] Creating pipeline directory.
+[2025-06-04 07:21:01Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:01Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:01Z INFO HostContext] Well known directory 'Work': 'Z:\cloud-app\actions-runner\_work'
+[2025-06-04 07:21:01Z INFO PipelineDirectoryManager] Creating workspace directory.
+[2025-06-04 07:21:01Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:01Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:01Z INFO HostContext] Well known directory 'Work': 'Z:\cloud-app\actions-runner\_work'
+[2025-06-04 07:21:01Z INFO JobExtension] Downloading actions
+[2025-06-04 07:21:01Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:01Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:01Z INFO HostContext] Well known directory 'Work': 'Z:\cloud-app\actions-runner\_work'
+[2025-06-04 07:21:01Z INFO HostContext] Well known directory 'Actions': 'Z:\cloud-app\actions-runner\_work\_actions'
+[2025-06-04 07:21:01Z INFO Worker] Listening for cancel message from the channel.
+[2025-06-04 07:21:01Z INFO Worker] Waiting for the job to complete or for a cancel message from the channel.
+[2025-06-04 07:21:01Z INFO ResultServer] Successfully started websocket client.
+[2025-06-04 07:21:01Z INFO JobServerQueue] Try to append 1 batches web console lines for record '3b2801b4-4581-455d-b2fb-14d54718b358', success rate: 1/1.
+[2025-06-04 07:21:02Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:02Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:02Z INFO HostContext] Well known directory 'Work': 'Z:\cloud-app\actions-runner\_work'
+[2025-06-04 07:21:02Z INFO HostContext] Well known directory 'Actions': 'Z:\cloud-app\actions-runner\_work\_actions'
+[2025-06-04 07:21:02Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:02Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:02Z INFO HostContext] Well known directory 'Work': 'Z:\cloud-app\actions-runner\_work'
+[2025-06-04 07:21:02Z INFO HostContext] Well known directory 'Actions': 'Z:\cloud-app\actions-runner\_work\_actions'
+[2025-06-04 07:21:02Z INFO ActionManager] Save archive 'https://api.github.com/repos/actions/checkout/zipball/f43a0e5ff2bd294095638e18286ca9a3d1956744' into Z:\cloud-app\actions-runner\_work\_actions\_temp_32cef991-7c81-4700-a23a-8569577c197a\013d7ddb-37a7-4076-8075-26816440faa8.zip.
+[2025-06-04 07:21:02Z INFO JobServerQueue] Try to append 1 batches web console lines for record '3b2801b4-4581-455d-b2fb-14d54718b358', success rate: 1/1.
+[2025-06-04 07:21:02Z INFO JobServerQueue] Job timeline record has been updated for the first time.
+[2025-06-04 07:21:02Z INFO ActionManager] Request URL: https://api.github.com/repos/actions/checkout/zipball/f43a0e5ff2bd294095638e18286ca9a3d1956744 X-GitHub-Request-Id: E0AC:5105B:14FDE3:1CD646:683FF3DE Http Status: OK
+[2025-06-04 07:21:02Z INFO ActionManager] Finished getting action repository.
+[2025-06-04 07:21:02Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:02Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:02Z INFO HostContext] Well known directory 'Work': 'Z:\cloud-app\actions-runner\_work'
+[2025-06-04 07:21:02Z INFO HostContext] Well known directory 'Actions': 'Z:\cloud-app\actions-runner\_work\_actions'
+[2025-06-04 07:21:02Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:02Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:02Z INFO HostContext] Well known directory 'Work': 'Z:\cloud-app\actions-runner\_work'
+[2025-06-04 07:21:02Z INFO HostContext] Well known directory 'Actions': 'Z:\cloud-app\actions-runner\_work\_actions'
+[2025-06-04 07:21:02Z INFO ActionManager] Save archive 'https://api.github.com/repos/docker/login-action/zipball/465a07811f14bebb1938fbed4728c6a1ff8901fc' into Z:\cloud-app\actions-runner\_work\_actions\_temp_dc1a9817-7c56-4e80-97e0-27371700c4d5\acee73ab-aba0-4cd0-a84f-ddb800c768c5.zip.
+[2025-06-04 07:21:03Z INFO JobServerQueue] Try to append 1 batches web console lines for record '3b2801b4-4581-455d-b2fb-14d54718b358', success rate: 1/1.
+[2025-06-04 07:21:03Z INFO ActionManager] Request URL: https://api.github.com/repos/docker/login-action/zipball/465a07811f14bebb1938fbed4728c6a1ff8901fc X-GitHub-Request-Id: E0AE:34CD0F:164BFC:1E245F:683FF3DF Http Status: OK
+[2025-06-04 07:21:03Z INFO ActionManager] Finished getting action repository.
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Work': 'Z:\cloud-app\actions-runner\_work'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Actions': 'Z:\cloud-app\actions-runner\_work\_actions'
+[2025-06-04 07:21:03Z INFO ActionManifestManager] Load schema file with definitions: [
+  "null",
+  "boolean",
+  "number",
+  "string",
+  "sequence",
+  "mapping",
+  "any",
+  "action-root",
+  "inputs",
+  "input",
+  "outputs",
+  "output-definition",
+  "runs",
+  "container-runs",
+  "container-runs-args",
+  "container-runs-env",
+  "node-runs",
+  "plugin-runs",
+  "composite-runs",
+  "composite-steps",
+  "composite-step",
+  "run-step",
+  "uses-step",
+  "container-runs-context",
+  "output-value",
+  "input-default-context",
+  "non-empty-string",
+  "string-steps-context",
+  "boolean-steps-context",
+  "step-env",
+  "step-if",
+  "step-with"
+]
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Work': 'Z:\cloud-app\actions-runner\_work'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Actions': 'Z:\cloud-app\actions-runner\_work\_actions'
+[2025-06-04 07:21:03Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 50,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 53,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 56,
+          "col": 3,
+          "lit": "sparse-checkout"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 60,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 61,
+          "col": 3,
+          "lit": "sparse-checkout-cone-mode"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 64,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 65,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 67,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 68,
+          "col": 3,
+          "lit": "fetch-tags"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 71,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 73,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 74,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 82,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 83,
+          "col": 3,
+          "lit": "set-safe-directory"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 85,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 86,
+          "col": 3,
+          "lit": "github-server-url"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node16",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2025-06-04 07:21:03Z INFO ActionManager] Action node.js file: dist/index.js, no more preparation.
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Work': 'Z:\cloud-app\actions-runner\_work'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Actions': 'Z:\cloud-app\actions-runner\_work\_actions'
+[2025-06-04 07:21:03Z INFO ActionManager] Load action that reference repository from 'Z:\cloud-app\actions-runner\_work\_actions\actions\checkout\v3'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Work': 'Z:\cloud-app\actions-runner\_work'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Actions': 'Z:\cloud-app\actions-runner\_work\_actions'
+[2025-06-04 07:21:03Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 50,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 53,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 56,
+          "col": 3,
+          "lit": "sparse-checkout"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 60,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 61,
+          "col": 3,
+          "lit": "sparse-checkout-cone-mode"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 64,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 65,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 67,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 68,
+          "col": 3,
+          "lit": "fetch-tags"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 71,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 73,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 74,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 82,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 83,
+          "col": 3,
+          "lit": "set-safe-directory"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 85,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 86,
+          "col": 3,
+          "lit": "github-server-url"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node16",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2025-06-04 07:21:03Z INFO ActionManager] Action pre node.js file: N/A.
+[2025-06-04 07:21:03Z INFO ActionManager] Action node.js file: dist/index.js.
+[2025-06-04 07:21:03Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Work': 'Z:\cloud-app\actions-runner\_work'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Actions': 'Z:\cloud-app\actions-runner\_work\_actions'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Work': 'Z:\cloud-app\actions-runner\_work'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Actions': 'Z:\cloud-app\actions-runner\_work\_actions'
+[2025-06-04 07:21:03Z INFO ActionManifestManager] Ignore action property author.
+[2025-06-04 07:21:03Z INFO ActionManifestManager] Ignore action property branding.
+[2025-06-04 07:21:03Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Docker Login",
+  "description": "GitHub Action to login against a Docker registry",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 10,
+          "col": 3,
+          "lit": "registry"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 13,
+          "col": 3,
+          "lit": "username"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 16,
+          "col": 3,
+          "lit": "password"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 19,
+          "col": 3,
+          "lit": "ecr"
+        },
+        "value": {
+          "type": 0,
+          "file": 3,
+          "line": 21,
+          "col": 14,
+          "lit": "auto"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 23,
+          "col": 3,
+          "lit": "logout"
+        },
+        "value": {
+          "type": 0,
+          "file": 3,
+          "line": 25,
+          "col": 14,
+          "lit": "true"
+        }
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node16",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2025-06-04 07:21:03Z INFO ActionManager] Action node.js file: dist/index.js, no more preparation.
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Work': 'Z:\cloud-app\actions-runner\_work'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Actions': 'Z:\cloud-app\actions-runner\_work\_actions'
+[2025-06-04 07:21:03Z INFO ActionManager] Load action that reference repository from 'Z:\cloud-app\actions-runner\_work\_actions\docker\login-action\v2'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Work': 'Z:\cloud-app\actions-runner\_work'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Actions': 'Z:\cloud-app\actions-runner\_work\_actions'
+[2025-06-04 07:21:03Z INFO ActionManifestManager] Ignore action property author.
+[2025-06-04 07:21:03Z INFO ActionManifestManager] Ignore action property branding.
+[2025-06-04 07:21:03Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Docker Login",
+  "description": "GitHub Action to login against a Docker registry",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 10,
+          "col": 3,
+          "lit": "registry"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 13,
+          "col": 3,
+          "lit": "username"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 16,
+          "col": 3,
+          "lit": "password"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 19,
+          "col": 3,
+          "lit": "ecr"
+        },
+        "value": {
+          "type": 0,
+          "file": 3,
+          "line": 21,
+          "col": 14,
+          "lit": "auto"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 23,
+          "col": 3,
+          "lit": "logout"
+        },
+        "value": {
+          "type": 0,
+          "file": 3,
+          "line": 25,
+          "col": 14,
+          "lit": "true"
+        }
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node16",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2025-06-04 07:21:03Z INFO ActionManager] Action pre node.js file: N/A.
+[2025-06-04 07:21:03Z INFO ActionManager] Action node.js file: dist/index.js.
+[2025-06-04 07:21:03Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2025-06-04 07:21:03Z INFO JobExtension] Adding .
+[2025-06-04 07:21:03Z INFO JobExtension] Adding .
+[2025-06-04 07:21:03Z INFO JobExtension] Adding .
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Diag': 'Z:\cloud-app\actions-runner\_diag'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Diag': 'Z:\cloud-app\actions-runner\_diag'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Diag': 'Z:\cloud-app\actions-runner\_diag'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Diag': 'Z:\cloud-app\actions-runner\_diag'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Diag': 'Z:\cloud-app\actions-runner\_diag'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Diag': 'Z:\cloud-app\actions-runner\_diag'
+[2025-06-04 07:21:03Z INFO JobExtension] Total accessible running process: 298.
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Work': 'Z:\cloud-app\actions-runner\_work'
+[2025-06-04 07:21:03Z INFO JobExtension] Start checking service connectivity in background.
+[2025-06-04 07:21:03Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "setup_job",
+  "type": "runner",
+  "stage": "Pre",
+  "stepId": "3b2801b4-4581-455d-b2fb-14d54718b358",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 3,
+  "startTime": "2025-06-04T07:21:01.2483511Z",
+  "finishTime": "2025-06-04T07:21:03.9020038Z"
+}.
+[2025-06-04 07:21:03Z INFO JobRunner] Total job steps: 3.
+[2025-06-04 07:21:03Z INFO JobRunner] Run all job steps.
+[2025-06-04 07:21:03Z INFO StepsRunner] Processing step: DisplayName='Run actions/checkout@v3'
+[2025-06-04 07:21:03Z INFO StepsRunner] Evaluating: success()
+[2025-06-04 07:21:03Z INFO StepsRunner] Result: true
+[2025-06-04 07:21:03Z INFO StepsRunner] Starting the step.
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Work': 'Z:\cloud-app\actions-runner\_work'
+[2025-06-04 07:21:03Z INFO StepsRunner] Which2: 'chcp'
+[2025-06-04 07:21:03Z INFO StepsRunner] Location: 'C:\Windows\system32\chcp.COM'
+[2025-06-04 07:21:03Z INFO ProcessInvokerWrapper] Starting process:
+[2025-06-04 07:21:03Z INFO ProcessInvokerWrapper]   File name: 'C:\Windows\system32\chcp.COM'
+[2025-06-04 07:21:03Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2025-06-04 07:21:03Z INFO ProcessInvokerWrapper]   Working directory: 'Z:\cloud-app\actions-runner\_work'
+[2025-06-04 07:21:03Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-06-04 07:21:03Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2025-06-04 07:21:03Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2025-06-04 07:21:03Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-06-04 07:21:03Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2025-06-04 07:21:03Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-06-04 07:21:03Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2025-06-04 07:21:03Z INFO ProcessInvokerWrapper] Process started with process id 25852, waiting for process exit.
+[2025-06-04 07:21:03Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-06-04 07:21:03Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-06-04 07:21:03Z INFO ProcessInvokerWrapper] Finished process 25852 with exit code 0, and elapsed time 00:00:00.0075858.
+[2025-06-04 07:21:03Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Work': 'Z:\cloud-app\actions-runner\_work'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Actions': 'Z:\cloud-app\actions-runner\_work\_actions'
+[2025-06-04 07:21:03Z INFO ActionManager] Load action that reference repository from 'Z:\cloud-app\actions-runner\_work\_actions\actions\checkout\v3'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Work': 'Z:\cloud-app\actions-runner\_work'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Actions': 'Z:\cloud-app\actions-runner\_work\_actions'
+[2025-06-04 07:21:03Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 50,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 53,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 56,
+          "col": 3,
+          "lit": "sparse-checkout"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 60,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 61,
+          "col": 3,
+          "lit": "sparse-checkout-cone-mode"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 64,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 65,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 67,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 68,
+          "col": 3,
+          "lit": "fetch-tags"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 71,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 73,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 74,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 82,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 83,
+          "col": 3,
+          "lit": "set-safe-directory"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 85,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 86,
+          "col": 3,
+          "lit": "github-server-url"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node16",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2025-06-04 07:21:03Z INFO ActionManager] Action pre node.js file: N/A.
+[2025-06-04 07:21:03Z INFO ActionManager] Action node.js file: dist/index.js.
+[2025-06-04 07:21:03Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2025-06-04 07:21:03Z INFO ExecutionContext] Reserve record order 5 to 8 for post job actions.
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Diag': 'Z:\cloud-app\actions-runner\_diag'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Diag': 'Z:\cloud-app\actions-runner\_diag'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Work': 'Z:\cloud-app\actions-runner\_work'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Temp': 'Z:\cloud-app\actions-runner\_work\_temp'
+[2025-06-04 07:21:03Z INFO ExecutionContext] Write event payload to Z:\cloud-app\actions-runner\_work\_temp\_github_workflow\event.json
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Work': 'Z:\cloud-app\actions-runner\_work'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Temp': 'Z:\cloud-app\actions-runner\_work\_temp'
+[2025-06-04 07:21:03Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2025-06-04 07:21:03Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddPathFileCommand, Runner.Worker
+[2025-06-04 07:21:03Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetEnvFileCommand, Runner.Worker
+[2025-06-04 07:21:03Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.CreateStepSummaryCommand, Runner.Worker
+[2025-06-04 07:21:03Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SaveStateFileCommand, Runner.Worker
+[2025-06-04 07:21:03Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetOutputFileCommand, Runner.Worker
+[2025-06-04 07:21:03Z INFO ActionManifestManager] Input 'repository': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 6,
+  "col": 14,
+  "lit": "***/cloud-app"
+}
+[2025-06-04 07:21:03Z INFO ActionManifestManager] Input 'ref': default value evaluate result: ""
+[2025-06-04 07:21:03Z INFO ActionManifestManager] Input 'token': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 24,
+  "col": 14,
+  "lit": "***"
+}
+[2025-06-04 07:21:03Z INFO ActionManifestManager] Input 'ssh-key': default value evaluate result: ""
+[2025-06-04 07:21:03Z INFO ActionManifestManager] Input 'ssh-known-hosts': default value evaluate result: ""
+[2025-06-04 07:21:03Z INFO ActionManifestManager] Input 'ssh-strict': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 47,
+  "col": 14,
+  "lit": "true"
+}
+[2025-06-04 07:21:03Z INFO ActionManifestManager] Input 'persist-credentials': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 50,
+  "col": 14,
+  "lit": "true"
+}
+[2025-06-04 07:21:03Z INFO ActionManifestManager] Input 'path': default value evaluate result: ""
+[2025-06-04 07:21:03Z INFO ActionManifestManager] Input 'clean': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 55,
+  "col": 14,
+  "lit": "true"
+}
+[2025-06-04 07:21:03Z INFO ActionManifestManager] Input 'sparse-checkout': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 60,
+  "col": 14,
+  "lit": ""
+}
+[2025-06-04 07:21:03Z INFO ActionManifestManager] Input 'sparse-checkout-cone-mode': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 64,
+  "col": 14,
+  "lit": "true"
+}
+[2025-06-04 07:21:03Z INFO ActionManifestManager] Input 'fetch-depth': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 67,
+  "col": 14,
+  "lit": "1"
+}
+[2025-06-04 07:21:03Z INFO ActionManifestManager] Input 'fetch-tags': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 70,
+  "col": 14,
+  "lit": "false"
+}
+[2025-06-04 07:21:03Z INFO ActionManifestManager] Input 'lfs': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 73,
+  "col": 14,
+  "lit": "false"
+}
+[2025-06-04 07:21:03Z INFO ActionManifestManager] Input 'submodules': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 82,
+  "col": 14,
+  "lit": "false"
+}
+[2025-06-04 07:21:03Z INFO ActionManifestManager] Input 'set-safe-directory': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 85,
+  "col": 14,
+  "lit": "true"
+}
+[2025-06-04 07:21:03Z INFO ActionManifestManager] Input 'github-server-url': default value evaluate result: ""
+[2025-06-04 07:21:03Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2025-06-04 07:21:03Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.InternalPluginSetRepoPathCommandExtension, Runner.Worker
+[2025-06-04 07:21:03Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetEnvCommandExtension, Runner.Worker
+[2025-06-04 07:21:03Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetOutputCommandExtension, Runner.Worker
+[2025-06-04 07:21:03Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SaveStateCommandExtension, Runner.Worker
+[2025-06-04 07:21:03Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddPathCommandExtension, Runner.Worker
+[2025-06-04 07:21:03Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddMaskCommandExtension, Runner.Worker
+[2025-06-04 07:21:03Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddMatcherCommandExtension, Runner.Worker
+[2025-06-04 07:21:03Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.RemoveMatcherCommandExtension, Runner.Worker
+[2025-06-04 07:21:03Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.WarningCommandExtension, Runner.Worker
+[2025-06-04 07:21:03Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.ErrorCommandExtension, Runner.Worker
+[2025-06-04 07:21:03Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.NoticeCommandExtension, Runner.Worker
+[2025-06-04 07:21:03Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.DebugCommandExtension, Runner.Worker
+[2025-06-04 07:21:03Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.GroupCommandExtension, Runner.Worker
+[2025-06-04 07:21:03Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.EndGroupCommandExtension, Runner.Worker
+[2025-06-04 07:21:03Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.EchoCommandExtension, Runner.Worker
+[2025-06-04 07:21:03Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2025-06-04 07:21:03Z INFO ActionCommandManager] Register action command extension for command set-env
+[2025-06-04 07:21:03Z INFO ActionCommandManager] Register action command extension for command set-output
+[2025-06-04 07:21:03Z INFO ActionCommandManager] Register action command extension for command save-state
+[2025-06-04 07:21:03Z INFO ActionCommandManager] Register action command extension for command add-path
+[2025-06-04 07:21:03Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2025-06-04 07:21:03Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2025-06-04 07:21:03Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2025-06-04 07:21:03Z INFO ActionCommandManager] Register action command extension for command warning
+[2025-06-04 07:21:03Z INFO ActionCommandManager] Register action command extension for command error
+[2025-06-04 07:21:03Z INFO ActionCommandManager] Register action command extension for command notice
+[2025-06-04 07:21:03Z INFO ActionCommandManager] Register action command extension for command debug
+[2025-06-04 07:21:03Z INFO ActionCommandManager] Register action command extension for command group
+[2025-06-04 07:21:03Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2025-06-04 07:21:03Z INFO ActionCommandManager] Register action command extension for command echo
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:03Z INFO HostContext] Well known directory 'Externals': 'Z:\cloud-app\actions-runner\externals'
+[2025-06-04 07:21:03Z INFO ProcessInvokerWrapper] Starting process:
+[2025-06-04 07:21:03Z INFO ProcessInvokerWrapper]   File name: 'Z:\cloud-app\actions-runner\externals\node20\bin\node.exe'
+[2025-06-04 07:21:03Z INFO ProcessInvokerWrapper]   Arguments: '"Z:\cloud-app\actions-runner\_work\_actions\actions\checkout\v3\dist/index.js"'
+[2025-06-04 07:21:03Z INFO ProcessInvokerWrapper]   Working directory: 'Z:\cloud-app\actions-runner\_work\cloud-app\cloud-app'
+[2025-06-04 07:21:03Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-06-04 07:21:03Z INFO ProcessInvokerWrapper]   Encoding web name: utf-8 ; code page: '65001'
+[2025-06-04 07:21:03Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2025-06-04 07:21:03Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-06-04 07:21:03Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2025-06-04 07:21:03Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-06-04 07:21:03Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2025-06-04 07:21:03Z INFO ProcessInvokerWrapper] Process started with process id 5088, waiting for process exit.
+[2025-06-04 07:21:04Z INFO AddMaskCommandExtension] Add new secret mask with length of 76
+[2025-06-04 07:21:04Z INFO JobServerQueue] Try to append 1 batches web console lines for record '3b2801b4-4581-455d-b2fb-14d54718b358', success rate: 1/1.
+[2025-06-04 07:21:04Z INFO JobServerQueue] Try to append 1 batches web console lines for record '8a314f67-866c-464a-bfc2-af9b49f3e24f', success rate: 1/1.
+[2025-06-04 07:21:04Z INFO JobServerQueue] Got a step log file to send to results service.
+[2025-06-04 07:21:04Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, Z:\cloud-app\actions-runner\_diag\blocks\96745744-2e58-4a38-a4df-e9fd66620b99_3b2801b4-4581-455d-b2fb-14d54718b358.1
+[2025-06-04 07:21:04Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2025-06-04 07:21:04Z INFO JobServerQueue] Try to append 1 batches web console lines for record '8a314f67-866c-464a-bfc2-af9b49f3e24f', success rate: 1/1.
+[2025-06-04 07:21:04Z INFO JobServerQueue] Try to append 1 batches web console lines for record '8a314f67-866c-464a-bfc2-af9b49f3e24f', success rate: 1/1.
+[2025-06-04 07:21:04Z INFO JobServerQueue] Try to append 1 batches web console lines for record '8a314f67-866c-464a-bfc2-af9b49f3e24f', success rate: 1/1.
+[2025-06-04 07:21:05Z INFO JobServerQueue] Tried to upload 1 file(s) to results, success rate: 1/1.
+[2025-06-04 07:21:05Z INFO JobServerQueue] Try to append 1 batches web console lines for record '8a314f67-866c-464a-bfc2-af9b49f3e24f', success rate: 1/1.
+[2025-06-04 07:21:05Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-06-04 07:21:05Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-06-04 07:21:05Z INFO ProcessInvokerWrapper] Finished process 5088 with exit code 0, and elapsed time 00:00:01.7794504.
+[2025-06-04 07:21:05Z INFO CreateStepSummaryCommand] Step Summary file (Z:\cloud-app\actions-runner\_work\_temp\_runner_file_commands\step_summary_d91642ea-e3f4-4201-b37d-c36159473fe5) is empty; skipping attachment upload
+[2025-06-04 07:21:05Z INFO StepsRunner] Step result: 
+[2025-06-04 07:21:05Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "actions/checkout",
+  "ref": "v3",
+  "type": "node20",
+  "stage": "Main",
+  "stepId": "8a314f67-866c-464a-bfc2-af9b49f3e24f",
+  "stepContextName": "__actions_checkout",
+  "hasPreStep": false,
+  "hasPostStep": true,
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 2,
+  "startTime": "2025-06-04T07:21:03.9069827Z",
+  "finishTime": "2025-06-04T07:21:05.7224966Z"
+}.
+[2025-06-04 07:21:05Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2025-06-04 07:21:05Z INFO StepsRunner] Current state: job state = ''
+[2025-06-04 07:21:05Z INFO StepsRunner] Processing step: DisplayName='Run docker/login-action@v2'
+[2025-06-04 07:21:05Z INFO StepsRunner] Evaluating: success()
+[2025-06-04 07:21:05Z INFO StepsRunner] Result: true
+[2025-06-04 07:21:05Z INFO StepsRunner] Starting the step.
+[2025-06-04 07:21:05Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:05Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:05Z INFO HostContext] Well known directory 'Work': 'Z:\cloud-app\actions-runner\_work'
+[2025-06-04 07:21:05Z INFO StepsRunner] Which2: 'chcp'
+[2025-06-04 07:21:05Z INFO StepsRunner] Location: 'C:\Windows\system32\chcp.COM'
+[2025-06-04 07:21:05Z INFO ProcessInvokerWrapper] Starting process:
+[2025-06-04 07:21:05Z INFO ProcessInvokerWrapper]   File name: 'C:\Windows\system32\chcp.COM'
+[2025-06-04 07:21:05Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2025-06-04 07:21:05Z INFO ProcessInvokerWrapper]   Working directory: 'Z:\cloud-app\actions-runner\_work'
+[2025-06-04 07:21:05Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-06-04 07:21:05Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2025-06-04 07:21:05Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2025-06-04 07:21:05Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-06-04 07:21:05Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2025-06-04 07:21:05Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-06-04 07:21:05Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2025-06-04 07:21:05Z INFO ProcessInvokerWrapper] Process started with process id 20500, waiting for process exit.
+[2025-06-04 07:21:05Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-06-04 07:21:05Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-06-04 07:21:05Z INFO ProcessInvokerWrapper] Finished process 20500 with exit code 0, and elapsed time 00:00:00.0044799.
+[2025-06-04 07:21:05Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2025-06-04 07:21:05Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:05Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:05Z INFO HostContext] Well known directory 'Work': 'Z:\cloud-app\actions-runner\_work'
+[2025-06-04 07:21:05Z INFO HostContext] Well known directory 'Actions': 'Z:\cloud-app\actions-runner\_work\_actions'
+[2025-06-04 07:21:05Z INFO ActionManager] Load action that reference repository from 'Z:\cloud-app\actions-runner\_work\_actions\docker\login-action\v2'
+[2025-06-04 07:21:05Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:05Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:05Z INFO HostContext] Well known directory 'Work': 'Z:\cloud-app\actions-runner\_work'
+[2025-06-04 07:21:05Z INFO HostContext] Well known directory 'Actions': 'Z:\cloud-app\actions-runner\_work\_actions'
+[2025-06-04 07:21:05Z INFO ActionManifestManager] Ignore action property author.
+[2025-06-04 07:21:05Z INFO ActionManifestManager] Ignore action property branding.
+[2025-06-04 07:21:05Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Docker Login",
+  "description": "GitHub Action to login against a Docker registry",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 10,
+          "col": 3,
+          "lit": "registry"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 13,
+          "col": 3,
+          "lit": "username"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 16,
+          "col": 3,
+          "lit": "password"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 19,
+          "col": 3,
+          "lit": "ecr"
+        },
+        "value": {
+          "type": 0,
+          "file": 3,
+          "line": 21,
+          "col": 14,
+          "lit": "auto"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 23,
+          "col": 3,
+          "lit": "logout"
+        },
+        "value": {
+          "type": 0,
+          "file": 3,
+          "line": 25,
+          "col": 14,
+          "lit": "true"
+        }
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node16",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2025-06-04 07:21:05Z INFO ActionManager] Action pre node.js file: N/A.
+[2025-06-04 07:21:05Z INFO ActionManager] Action node.js file: dist/index.js.
+[2025-06-04 07:21:05Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2025-06-04 07:21:05Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:05Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:05Z INFO HostContext] Well known directory 'Diag': 'Z:\cloud-app\actions-runner\_diag'
+[2025-06-04 07:21:05Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:05Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:05Z INFO HostContext] Well known directory 'Diag': 'Z:\cloud-app\actions-runner\_diag'
+[2025-06-04 07:21:05Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:05Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:05Z INFO HostContext] Well known directory 'Work': 'Z:\cloud-app\actions-runner\_work'
+[2025-06-04 07:21:05Z INFO HostContext] Well known directory 'Temp': 'Z:\cloud-app\actions-runner\_work\_temp'
+[2025-06-04 07:21:05Z INFO ExecutionContext] Write event payload to Z:\cloud-app\actions-runner\_work\_temp\_github_workflow\event.json
+[2025-06-04 07:21:05Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:05Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:05Z INFO HostContext] Well known directory 'Work': 'Z:\cloud-app\actions-runner\_work'
+[2025-06-04 07:21:05Z INFO HostContext] Well known directory 'Temp': 'Z:\cloud-app\actions-runner\_work\_temp'
+[2025-06-04 07:21:05Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2025-06-04 07:21:05Z INFO ActionManifestManager] Input 'registry': default value evaluate result: ""
+[2025-06-04 07:21:05Z INFO ActionManifestManager] Input 'ecr': default value evaluate result: {
+  "type": 0,
+  "file": 3,
+  "line": 21,
+  "col": 14,
+  "lit": "auto"
+}
+[2025-06-04 07:21:05Z INFO ActionManifestManager] Input 'logout': default value evaluate result: {
+  "type": 0,
+  "file": 3,
+  "line": 25,
+  "col": 14,
+  "lit": "true"
+}
+[2025-06-04 07:21:05Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2025-06-04 07:21:05Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2025-06-04 07:21:05Z INFO ActionCommandManager] Register action command extension for command set-env
+[2025-06-04 07:21:05Z INFO ActionCommandManager] Register action command extension for command set-output
+[2025-06-04 07:21:05Z INFO ActionCommandManager] Register action command extension for command save-state
+[2025-06-04 07:21:05Z INFO ActionCommandManager] Register action command extension for command add-path
+[2025-06-04 07:21:05Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2025-06-04 07:21:05Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2025-06-04 07:21:05Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2025-06-04 07:21:05Z INFO ActionCommandManager] Register action command extension for command warning
+[2025-06-04 07:21:05Z INFO ActionCommandManager] Register action command extension for command error
+[2025-06-04 07:21:05Z INFO ActionCommandManager] Register action command extension for command notice
+[2025-06-04 07:21:05Z INFO ActionCommandManager] Register action command extension for command debug
+[2025-06-04 07:21:05Z INFO ActionCommandManager] Register action command extension for command group
+[2025-06-04 07:21:05Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2025-06-04 07:21:05Z INFO ActionCommandManager] Register action command extension for command echo
+[2025-06-04 07:21:05Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:05Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:05Z INFO HostContext] Well known directory 'Externals': 'Z:\cloud-app\actions-runner\externals'
+[2025-06-04 07:21:05Z INFO ProcessInvokerWrapper] Starting process:
+[2025-06-04 07:21:05Z INFO ProcessInvokerWrapper]   File name: 'Z:\cloud-app\actions-runner\externals\node20\bin\node.exe'
+[2025-06-04 07:21:05Z INFO ProcessInvokerWrapper]   Arguments: '"Z:\cloud-app\actions-runner\_work\_actions\docker\login-action\v2\dist/index.js"'
+[2025-06-04 07:21:05Z INFO ProcessInvokerWrapper]   Working directory: 'Z:\cloud-app\actions-runner\_work\cloud-app\cloud-app'
+[2025-06-04 07:21:05Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-06-04 07:21:05Z INFO ProcessInvokerWrapper]   Encoding web name: utf-8 ; code page: '65001'
+[2025-06-04 07:21:05Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2025-06-04 07:21:05Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-06-04 07:21:05Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2025-06-04 07:21:05Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-06-04 07:21:05Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2025-06-04 07:21:05Z INFO ProcessInvokerWrapper] Process started with process id 7900, waiting for process exit.
+[2025-06-04 07:21:05Z INFO JobServerQueue] Try to append 1 batches web console lines for record '8a314f67-866c-464a-bfc2-af9b49f3e24f', success rate: 1/1.
+[2025-06-04 07:21:05Z INFO JobServerQueue] Try to append 1 batches web console lines for record '7ca5e346-ccad-49a9-8b08-69125c1604ef', success rate: 1/1.
+[2025-06-04 07:21:06Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2025-06-04 07:21:06Z INFO JobServerQueue] Got a step log file to send to results service.
+[2025-06-04 07:21:06Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, Z:\cloud-app\actions-runner\_diag\blocks\96745744-2e58-4a38-a4df-e9fd66620b99_8a314f67-866c-464a-bfc2-af9b49f3e24f.1
+[2025-06-04 07:21:06Z INFO JobServerQueue] Tried to upload 1 file(s) to results, success rate: 1/1.
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper] Finished process 7900 with exit code 0, and elapsed time 00:00:01.3172308.
+[2025-06-04 07:21:07Z INFO CreateStepSummaryCommand] Step Summary file (Z:\cloud-app\actions-runner\_work\_temp\_runner_file_commands\step_summary_83a191ce-c01c-4593-bdd5-e735ecb5a5d8) is empty; skipping attachment upload
+[2025-06-04 07:21:07Z INFO StepsRunner] Step result: 
+[2025-06-04 07:21:07Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "docker/login-action",
+  "ref": "v2",
+  "type": "node20",
+  "stage": "Main",
+  "stepId": "7ca5e346-ccad-49a9-8b08-69125c1604ef",
+  "stepContextName": "__docker_login-action",
+  "hasPreStep": false,
+  "hasPostStep": true,
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 2,
+  "startTime": "2025-06-04T07:21:05.7229855Z",
+  "finishTime": "2025-06-04T07:21:07.0556598Z"
+}.
+[2025-06-04 07:21:07Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2025-06-04 07:21:07Z INFO StepsRunner] Current state: job state = ''
+[2025-06-04 07:21:07Z INFO StepsRunner] Processing step: DisplayName='Build and push Docker image'
+[2025-06-04 07:21:07Z INFO StepsRunner] Evaluating: success()
+[2025-06-04 07:21:07Z INFO StepsRunner] Result: true
+[2025-06-04 07:21:07Z INFO StepsRunner] Starting the step.
+[2025-06-04 07:21:07Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:07Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:07Z INFO HostContext] Well known directory 'Work': 'Z:\cloud-app\actions-runner\_work'
+[2025-06-04 07:21:07Z INFO StepsRunner] Which2: 'chcp'
+[2025-06-04 07:21:07Z INFO StepsRunner] Location: 'C:\Windows\system32\chcp.COM'
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper] Starting process:
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper]   File name: 'C:\Windows\system32\chcp.COM'
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper]   Working directory: 'Z:\cloud-app\actions-runner\_work'
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper] Process started with process id 27208, waiting for process exit.
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper] Finished process 27208 with exit code 0, and elapsed time 00:00:00.0043606.
+[2025-06-04 07:21:07Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2025-06-04 07:21:07Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:07Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:07Z INFO HostContext] Well known directory 'Work': 'Z:\cloud-app\actions-runner\_work'
+[2025-06-04 07:21:07Z INFO HostContext] Well known directory 'Temp': 'Z:\cloud-app\actions-runner\_work\_temp'
+[2025-06-04 07:21:07Z INFO ExecutionContext] Write event payload to Z:\cloud-app\actions-runner\_work\_temp\_github_workflow\event.json
+[2025-06-04 07:21:07Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:07Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:07Z INFO HostContext] Well known directory 'Work': 'Z:\cloud-app\actions-runner\_work'
+[2025-06-04 07:21:07Z INFO HostContext] Well known directory 'Temp': 'Z:\cloud-app\actions-runner\_work\_temp'
+[2025-06-04 07:21:07Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2025-06-04 07:21:07Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2025-06-04 07:21:07Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2025-06-04 07:21:07Z INFO ActionCommandManager] Register action command extension for command set-env
+[2025-06-04 07:21:07Z INFO ActionCommandManager] Register action command extension for command set-output
+[2025-06-04 07:21:07Z INFO ActionCommandManager] Register action command extension for command save-state
+[2025-06-04 07:21:07Z INFO ActionCommandManager] Register action command extension for command add-path
+[2025-06-04 07:21:07Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2025-06-04 07:21:07Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2025-06-04 07:21:07Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2025-06-04 07:21:07Z INFO ActionCommandManager] Register action command extension for command warning
+[2025-06-04 07:21:07Z INFO ActionCommandManager] Register action command extension for command error
+[2025-06-04 07:21:07Z INFO ActionCommandManager] Register action command extension for command notice
+[2025-06-04 07:21:07Z INFO ActionCommandManager] Register action command extension for command debug
+[2025-06-04 07:21:07Z INFO ActionCommandManager] Register action command extension for command group
+[2025-06-04 07:21:07Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2025-06-04 07:21:07Z INFO ActionCommandManager] Register action command extension for command echo
+[2025-06-04 07:21:07Z INFO ScriptHandler] Which2: 'pwsh'
+[2025-06-04 07:21:07Z INFO ScriptHandler] pwsh: command not found. Make sure 'pwsh' is installed and its location included in the 'Path' environment variable.
+[2025-06-04 07:21:07Z INFO ScriptHandler] Defaulting to powershell
+[2025-06-04 07:21:07Z INFO ScriptHandler] Which2: 'powershell'
+[2025-06-04 07:21:07Z INFO ScriptHandler] Location: 'C:\Windows\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2025-06-04 07:21:07Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:07Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:07Z INFO HostContext] Well known directory 'Work': 'Z:\cloud-app\actions-runner\_work'
+[2025-06-04 07:21:07Z INFO HostContext] Well known directory 'Temp': 'Z:\cloud-app\actions-runner\_work\_temp'
+[2025-06-04 07:21:07Z INFO ScriptHandler] Which2: 'pwsh'
+[2025-06-04 07:21:07Z INFO ScriptHandler] pwsh: command not found. Make sure 'pwsh' is installed and its location included in the 'Path' environment variable.
+[2025-06-04 07:21:07Z INFO ScriptHandler] Defaulting to powershell
+[2025-06-04 07:21:07Z INFO ScriptHandler] Which2: 'powershell'
+[2025-06-04 07:21:07Z INFO ScriptHandler] Location: 'C:\Windows\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper] Starting process:
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper]   File name: 'C:\Windows\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper]   Arguments: '-command ". 'Z:\cloud-app\actions-runner\_work\_temp\6a6706c5-dd0f-49ad-9aa7-0c6d8b5cc8b0.ps1'"'
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper]   Working directory: 'Z:\cloud-app\actions-runner\_work\cloud-app\cloud-app'
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper] Process started with process id 18048, waiting for process exit.
+[2025-06-04 07:21:07Z INFO JobServerQueue] Try to append 1 batches web console lines for record '7ca5e346-ccad-49a9-8b08-69125c1604ef', success rate: 1/1.
+[2025-06-04 07:21:07Z INFO JobServerQueue] Try to append 1 batches web console lines for record '3d8796b3-ec31-4eec-9630-ca7b00928c49', success rate: 1/1.
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper] Finished process 18048 with exit code 1, and elapsed time 00:00:00.1536569.
+[2025-06-04 07:21:07Z INFO CreateStepSummaryCommand] Step Summary file (Z:\cloud-app\actions-runner\_work\_temp\_runner_file_commands\step_summary_05400996-fc36-401f-8983-b05db23df8ae) is empty; skipping attachment upload
+[2025-06-04 07:21:07Z INFO StepsRunner] Step result: Failed
+[2025-06-04 07:21:07Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "powershell",
+  "type": "run",
+  "stage": "Main",
+  "stepId": "3d8796b3-ec31-4eec-9630-ca7b00928c49",
+  "stepContextName": "__run",
+  "result": "failed",
+  "errorMessages": [
+    "Process completed with exit code 1."
+  ],
+  "executionTimeInSeconds": 1,
+  "startTime": "2025-06-04T07:21:07.056173Z",
+  "finishTime": "2025-06-04T07:21:07.2305936Z"
+}.
+[2025-06-04 07:21:07Z INFO StepsRunner] Update job result with current step result 'Failed'.
+[2025-06-04 07:21:07Z INFO StepsRunner] Current state: job state = 'Failed'
+[2025-06-04 07:21:07Z INFO StepsRunner] Processing step: DisplayName='Post Run docker/login-action@v2'
+[2025-06-04 07:21:07Z INFO StepsRunner] Evaluating: always()
+[2025-06-04 07:21:07Z INFO StepsRunner] Result: true
+[2025-06-04 07:21:07Z INFO StepsRunner] Starting the step.
+[2025-06-04 07:21:07Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:07Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:07Z INFO HostContext] Well known directory 'Work': 'Z:\cloud-app\actions-runner\_work'
+[2025-06-04 07:21:07Z INFO StepsRunner] Which2: 'chcp'
+[2025-06-04 07:21:07Z INFO StepsRunner] Location: 'C:\Windows\system32\chcp.COM'
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper] Starting process:
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper]   File name: 'C:\Windows\system32\chcp.COM'
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper]   Working directory: 'Z:\cloud-app\actions-runner\_work'
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper] Process started with process id 22668, waiting for process exit.
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper] Finished process 22668 with exit code 0, and elapsed time 00:00:00.0046413.
+[2025-06-04 07:21:07Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2025-06-04 07:21:07Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:07Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:07Z INFO HostContext] Well known directory 'Work': 'Z:\cloud-app\actions-runner\_work'
+[2025-06-04 07:21:07Z INFO HostContext] Well known directory 'Actions': 'Z:\cloud-app\actions-runner\_work\_actions'
+[2025-06-04 07:21:07Z INFO ActionManager] Load action that reference repository from 'Z:\cloud-app\actions-runner\_work\_actions\docker\login-action\v2'
+[2025-06-04 07:21:07Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:07Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:07Z INFO HostContext] Well known directory 'Work': 'Z:\cloud-app\actions-runner\_work'
+[2025-06-04 07:21:07Z INFO HostContext] Well known directory 'Actions': 'Z:\cloud-app\actions-runner\_work\_actions'
+[2025-06-04 07:21:07Z INFO ActionManifestManager] Ignore action property author.
+[2025-06-04 07:21:07Z INFO ActionManifestManager] Ignore action property branding.
+[2025-06-04 07:21:07Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Docker Login",
+  "description": "GitHub Action to login against a Docker registry",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 10,
+          "col": 3,
+          "lit": "registry"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 13,
+          "col": 3,
+          "lit": "username"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 16,
+          "col": 3,
+          "lit": "password"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 19,
+          "col": 3,
+          "lit": "ecr"
+        },
+        "value": {
+          "type": 0,
+          "file": 3,
+          "line": 21,
+          "col": 14,
+          "lit": "auto"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 23,
+          "col": 3,
+          "lit": "logout"
+        },
+        "value": {
+          "type": 0,
+          "file": 3,
+          "line": 25,
+          "col": 14,
+          "lit": "true"
+        }
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node16",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2025-06-04 07:21:07Z INFO ActionManager] Action pre node.js file: N/A.
+[2025-06-04 07:21:07Z INFO ActionManager] Action node.js file: dist/index.js.
+[2025-06-04 07:21:07Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2025-06-04 07:21:07Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:07Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:07Z INFO HostContext] Well known directory 'Work': 'Z:\cloud-app\actions-runner\_work'
+[2025-06-04 07:21:07Z INFO HostContext] Well known directory 'Temp': 'Z:\cloud-app\actions-runner\_work\_temp'
+[2025-06-04 07:21:07Z INFO ExecutionContext] Write event payload to Z:\cloud-app\actions-runner\_work\_temp\_github_workflow\event.json
+[2025-06-04 07:21:07Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:07Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:07Z INFO HostContext] Well known directory 'Work': 'Z:\cloud-app\actions-runner\_work'
+[2025-06-04 07:21:07Z INFO HostContext] Well known directory 'Temp': 'Z:\cloud-app\actions-runner\_work\_temp'
+[2025-06-04 07:21:07Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2025-06-04 07:21:07Z INFO ActionManifestManager] Input 'registry': default value evaluate result: ""
+[2025-06-04 07:21:07Z INFO ActionManifestManager] Input 'ecr': default value evaluate result: {
+  "type": 0,
+  "file": 3,
+  "line": 21,
+  "col": 14,
+  "lit": "auto"
+}
+[2025-06-04 07:21:07Z INFO ActionManifestManager] Input 'logout': default value evaluate result: {
+  "type": 0,
+  "file": 3,
+  "line": 25,
+  "col": 14,
+  "lit": "true"
+}
+[2025-06-04 07:21:07Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2025-06-04 07:21:07Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2025-06-04 07:21:07Z INFO ActionCommandManager] Register action command extension for command set-env
+[2025-06-04 07:21:07Z INFO ActionCommandManager] Register action command extension for command set-output
+[2025-06-04 07:21:07Z INFO ActionCommandManager] Register action command extension for command save-state
+[2025-06-04 07:21:07Z INFO ActionCommandManager] Register action command extension for command add-path
+[2025-06-04 07:21:07Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2025-06-04 07:21:07Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2025-06-04 07:21:07Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2025-06-04 07:21:07Z INFO ActionCommandManager] Register action command extension for command warning
+[2025-06-04 07:21:07Z INFO ActionCommandManager] Register action command extension for command error
+[2025-06-04 07:21:07Z INFO ActionCommandManager] Register action command extension for command notice
+[2025-06-04 07:21:07Z INFO ActionCommandManager] Register action command extension for command debug
+[2025-06-04 07:21:07Z INFO ActionCommandManager] Register action command extension for command group
+[2025-06-04 07:21:07Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2025-06-04 07:21:07Z INFO ActionCommandManager] Register action command extension for command echo
+[2025-06-04 07:21:07Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:07Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:07Z INFO HostContext] Well known directory 'Externals': 'Z:\cloud-app\actions-runner\externals'
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper] Starting process:
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper]   File name: 'Z:\cloud-app\actions-runner\externals\node20\bin\node.exe'
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper]   Arguments: '"Z:\cloud-app\actions-runner\_work\_actions\docker\login-action\v2\dist/index.js"'
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper]   Working directory: 'Z:\cloud-app\actions-runner\_work\cloud-app\cloud-app'
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper]   Encoding web name: utf-8 ; code page: '65001'
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper] Process started with process id 1988, waiting for process exit.
+[2025-06-04 07:21:07Z INFO JobServerQueue] Try to upload 2 log files or attachments, success rate: 2/2.
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper] Finished process 1988 with exit code 0, and elapsed time 00:00:00.1994214.
+[2025-06-04 07:21:07Z INFO CreateStepSummaryCommand] Step Summary file (Z:\cloud-app\actions-runner\_work\_temp\_runner_file_commands\step_summary_934f1bfb-36a7-4574-8688-e81b92e06e89) is empty; skipping attachment upload
+[2025-06-04 07:21:07Z INFO StepsRunner] Step result: 
+[2025-06-04 07:21:07Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "docker/login-action",
+  "ref": "v2",
+  "type": "node20",
+  "stage": "Post",
+  "stepId": "bad87e83-d212-4672-a895-3eec602be126",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 1,
+  "startTime": "2025-06-04T07:21:07.2315871Z",
+  "finishTime": "2025-06-04T07:21:07.4406215Z"
+}.
+[2025-06-04 07:21:07Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2025-06-04 07:21:07Z INFO StepsRunner] Current state: job state = 'Failed'
+[2025-06-04 07:21:07Z INFO StepsRunner] Processing step: DisplayName='Post Run actions/checkout@v3'
+[2025-06-04 07:21:07Z INFO StepsRunner] Evaluating: always()
+[2025-06-04 07:21:07Z INFO StepsRunner] Result: true
+[2025-06-04 07:21:07Z INFO StepsRunner] Starting the step.
+[2025-06-04 07:21:07Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:07Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:07Z INFO HostContext] Well known directory 'Work': 'Z:\cloud-app\actions-runner\_work'
+[2025-06-04 07:21:07Z INFO StepsRunner] Which2: 'chcp'
+[2025-06-04 07:21:07Z INFO StepsRunner] Location: 'C:\Windows\system32\chcp.COM'
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper] Starting process:
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper]   File name: 'C:\Windows\system32\chcp.COM'
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper]   Working directory: 'Z:\cloud-app\actions-runner\_work'
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper] Process started with process id 29896, waiting for process exit.
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper] Finished process 29896 with exit code 0, and elapsed time 00:00:00.0045077.
+[2025-06-04 07:21:07Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2025-06-04 07:21:07Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:07Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:07Z INFO HostContext] Well known directory 'Work': 'Z:\cloud-app\actions-runner\_work'
+[2025-06-04 07:21:07Z INFO HostContext] Well known directory 'Actions': 'Z:\cloud-app\actions-runner\_work\_actions'
+[2025-06-04 07:21:07Z INFO ActionManager] Load action that reference repository from 'Z:\cloud-app\actions-runner\_work\_actions\actions\checkout\v3'
+[2025-06-04 07:21:07Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:07Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:07Z INFO HostContext] Well known directory 'Work': 'Z:\cloud-app\actions-runner\_work'
+[2025-06-04 07:21:07Z INFO HostContext] Well known directory 'Actions': 'Z:\cloud-app\actions-runner\_work\_actions'
+[2025-06-04 07:21:07Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 50,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 53,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 56,
+          "col": 3,
+          "lit": "sparse-checkout"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 60,
+          "col": 14,
+          "lit": ""
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 61,
+          "col": 3,
+          "lit": "sparse-checkout-cone-mode"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 64,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 65,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 67,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 68,
+          "col": 3,
+          "lit": "fetch-tags"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 71,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 73,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 74,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 82,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 83,
+          "col": 3,
+          "lit": "set-safe-directory"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 85,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 86,
+          "col": 3,
+          "lit": "github-server-url"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "nodeVersion": "node16",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2025-06-04 07:21:07Z INFO ActionManager] Action pre node.js file: N/A.
+[2025-06-04 07:21:07Z INFO ActionManager] Action node.js file: dist/index.js.
+[2025-06-04 07:21:07Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2025-06-04 07:21:07Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:07Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:07Z INFO HostContext] Well known directory 'Work': 'Z:\cloud-app\actions-runner\_work'
+[2025-06-04 07:21:07Z INFO HostContext] Well known directory 'Temp': 'Z:\cloud-app\actions-runner\_work\_temp'
+[2025-06-04 07:21:07Z INFO ExecutionContext] Write event payload to Z:\cloud-app\actions-runner\_work\_temp\_github_workflow\event.json
+[2025-06-04 07:21:07Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:07Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:07Z INFO HostContext] Well known directory 'Work': 'Z:\cloud-app\actions-runner\_work'
+[2025-06-04 07:21:07Z INFO HostContext] Well known directory 'Temp': 'Z:\cloud-app\actions-runner\_work\_temp'
+[2025-06-04 07:21:07Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2025-06-04 07:21:07Z INFO ActionManifestManager] Input 'repository': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 6,
+  "col": 14,
+  "lit": "***/cloud-app"
+}
+[2025-06-04 07:21:07Z INFO ActionManifestManager] Input 'ref': default value evaluate result: ""
+[2025-06-04 07:21:07Z INFO ActionManifestManager] Input 'token': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 24,
+  "col": 14,
+  "lit": "***"
+}
+[2025-06-04 07:21:07Z INFO ActionManifestManager] Input 'ssh-key': default value evaluate result: ""
+[2025-06-04 07:21:07Z INFO ActionManifestManager] Input 'ssh-known-hosts': default value evaluate result: ""
+[2025-06-04 07:21:07Z INFO ActionManifestManager] Input 'ssh-strict': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 47,
+  "col": 14,
+  "lit": "true"
+}
+[2025-06-04 07:21:07Z INFO ActionManifestManager] Input 'persist-credentials': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 50,
+  "col": 14,
+  "lit": "true"
+}
+[2025-06-04 07:21:07Z INFO ActionManifestManager] Input 'path': default value evaluate result: ""
+[2025-06-04 07:21:07Z INFO ActionManifestManager] Input 'clean': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 55,
+  "col": 14,
+  "lit": "true"
+}
+[2025-06-04 07:21:07Z INFO ActionManifestManager] Input 'sparse-checkout': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 60,
+  "col": 14,
+  "lit": ""
+}
+[2025-06-04 07:21:07Z INFO ActionManifestManager] Input 'sparse-checkout-cone-mode': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 64,
+  "col": 14,
+  "lit": "true"
+}
+[2025-06-04 07:21:07Z INFO ActionManifestManager] Input 'fetch-depth': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 67,
+  "col": 14,
+  "lit": "1"
+}
+[2025-06-04 07:21:07Z INFO ActionManifestManager] Input 'fetch-tags': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 70,
+  "col": 14,
+  "lit": "false"
+}
+[2025-06-04 07:21:07Z INFO ActionManifestManager] Input 'lfs': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 73,
+  "col": 14,
+  "lit": "false"
+}
+[2025-06-04 07:21:07Z INFO ActionManifestManager] Input 'submodules': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 82,
+  "col": 14,
+  "lit": "false"
+}
+[2025-06-04 07:21:07Z INFO ActionManifestManager] Input 'set-safe-directory': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 85,
+  "col": 14,
+  "lit": "true"
+}
+[2025-06-04 07:21:07Z INFO ActionManifestManager] Input 'github-server-url': default value evaluate result: ""
+[2025-06-04 07:21:07Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2025-06-04 07:21:07Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2025-06-04 07:21:07Z INFO ActionCommandManager] Register action command extension for command set-env
+[2025-06-04 07:21:07Z INFO ActionCommandManager] Register action command extension for command set-output
+[2025-06-04 07:21:07Z INFO ActionCommandManager] Register action command extension for command save-state
+[2025-06-04 07:21:07Z INFO ActionCommandManager] Register action command extension for command add-path
+[2025-06-04 07:21:07Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2025-06-04 07:21:07Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2025-06-04 07:21:07Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2025-06-04 07:21:07Z INFO ActionCommandManager] Register action command extension for command warning
+[2025-06-04 07:21:07Z INFO ActionCommandManager] Register action command extension for command error
+[2025-06-04 07:21:07Z INFO ActionCommandManager] Register action command extension for command notice
+[2025-06-04 07:21:07Z INFO ActionCommandManager] Register action command extension for command debug
+[2025-06-04 07:21:07Z INFO ActionCommandManager] Register action command extension for command group
+[2025-06-04 07:21:07Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2025-06-04 07:21:07Z INFO ActionCommandManager] Register action command extension for command echo
+[2025-06-04 07:21:07Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:07Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:07Z INFO HostContext] Well known directory 'Externals': 'Z:\cloud-app\actions-runner\externals'
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper] Starting process:
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper]   File name: 'Z:\cloud-app\actions-runner\externals\node20\bin\node.exe'
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper]   Arguments: '"Z:\cloud-app\actions-runner\_work\_actions\actions\checkout\v3\dist/index.js"'
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper]   Working directory: 'Z:\cloud-app\actions-runner\_work\cloud-app\cloud-app'
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper]   Encoding web name: utf-8 ; code page: '65001'
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2025-06-04 07:21:07Z INFO ProcessInvokerWrapper] Process started with process id 11436, waiting for process exit.
+[2025-06-04 07:21:07Z INFO JobServerQueue] Try to append 1 batches web console lines for record '3d8796b3-ec31-4eec-9630-ca7b00928c49', success rate: 1/1.
+[2025-06-04 07:21:07Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'bad87e83-d212-4672-a895-3eec602be126', success rate: 1/1.
+[2025-06-04 07:21:07Z INFO JobServerQueue] Try to append 1 batches web console lines for record '0155234a-bba6-41c9-aec2-59caa6c03e28', success rate: 1/1.
+[2025-06-04 07:21:07Z INFO AddMaskCommandExtension] Add new secret mask with length of 32
+[2025-06-04 07:21:07Z INFO JobServerQueue] Try to append 1 batches web console lines for record '0155234a-bba6-41c9-aec2-59caa6c03e28', success rate: 1/1.
+[2025-06-04 07:21:07Z INFO JobServerQueue] Got a step log file to send to results service.
+[2025-06-04 07:21:07Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, Z:\cloud-app\actions-runner\_diag\blocks\96745744-2e58-4a38-a4df-e9fd66620b99_7ca5e346-ccad-49a9-8b08-69125c1604ef.1
+[2025-06-04 07:21:07Z INFO JobServerQueue] Try to append 1 batches web console lines for record '0155234a-bba6-41c9-aec2-59caa6c03e28', success rate: 1/1.
+[2025-06-04 07:21:08Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-06-04 07:21:08Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-06-04 07:21:08Z INFO ProcessInvokerWrapper] Finished process 11436 with exit code 0, and elapsed time 00:00:00.7400717.
+[2025-06-04 07:21:08Z INFO CreateStepSummaryCommand] Step Summary file (Z:\cloud-app\actions-runner\_work\_temp\_runner_file_commands\step_summary_8d8598ef-d39b-4c76-8b0f-e3b840589b85) is empty; skipping attachment upload
+[2025-06-04 07:21:08Z INFO StepsRunner] Step result: 
+[2025-06-04 07:21:08Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "actions/checkout",
+  "ref": "v3",
+  "type": "node20",
+  "stage": "Post",
+  "stepId": "0155234a-bba6-41c9-aec2-59caa6c03e28",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 1,
+  "startTime": "2025-06-04T07:21:07.4410275Z",
+  "finishTime": "2025-06-04T07:21:08.1914122Z"
+}.
+[2025-06-04 07:21:08Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2025-06-04 07:21:08Z INFO StepsRunner] Current state: job state = 'Failed'
+[2025-06-04 07:21:08Z INFO JobRunner] Finalize job.
+[2025-06-04 07:21:08Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:08Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:08Z INFO HostContext] Well known directory 'Diag': 'Z:\cloud-app\actions-runner\_diag'
+[2025-06-04 07:21:08Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:08Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:08Z INFO HostContext] Well known directory 'Diag': 'Z:\cloud-app\actions-runner\_diag'
+[2025-06-04 07:21:08Z INFO JobExtension] Initialize Env context
+[2025-06-04 07:21:08Z INFO JobExtension] Initialize steps context
+[2025-06-04 07:21:08Z INFO JobExtension] Total accessible running process: 299.
+[2025-06-04 07:21:08Z INFO JobExtension] Inspecting process environment variables. PID: 15296 (SearchProtocolHost)
+[2025-06-04 07:21:08Z WARN JobExtension] Ignore exception during read process environment variables: Access is denied.
+[2025-06-04 07:21:08Z INFO ExecutionContext] Publish step telemetry for current step {
+  "action": "complete_job",
+  "type": "runner",
+  "stage": "Post",
+  "stepId": "8ce981df-bea1-4e14-89bc-defff58043ed",
+  "result": "succeeded",
+  "errorMessages": [],
+  "executionTimeInSeconds": 1,
+  "startTime": "2025-06-04T07:21:08.1937489Z",
+  "finishTime": "2025-06-04T07:21:08.2049437Z"
+}.
+[2025-06-04 07:21:08Z INFO JobRunner] Job result after all job steps finish: Failed
+[2025-06-04 07:21:08Z INFO JobRunner] Completing the job execution context.
+[2025-06-04 07:21:08Z INFO JobRunner] Shutting down the job server queue.
+[2025-06-04 07:21:08Z INFO JobServerQueue] Fire signal to shutdown all queues.
+[2025-06-04 07:21:08Z INFO JobServerQueue] Got a step log file to send to results service.
+[2025-06-04 07:21:08Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, Z:\cloud-app\actions-runner\_diag\blocks\96745744-2e58-4a38-a4df-e9fd66620b99_3d8796b3-ec31-4eec-9630-ca7b00928c49.1
+[2025-06-04 07:21:08Z INFO JobServerQueue] Got a step log file to send to results service.
+[2025-06-04 07:21:08Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, Z:\cloud-app\actions-runner\_diag\blocks\96745744-2e58-4a38-a4df-e9fd66620b99_bad87e83-d212-4672-a895-3eec602be126.1
+[2025-06-04 07:21:09Z INFO JobServerQueue] Tried to upload 3 file(s) to results, success rate: 3/3.
+[2025-06-04 07:21:10Z INFO JobServerQueue] All queue process task stopped.
+[2025-06-04 07:21:10Z INFO JobServerQueue] Try to append 1 batches web console lines for record '8ce981df-bea1-4e14-89bc-defff58043ed', success rate: 1/1.
+[2025-06-04 07:21:10Z INFO JobServerQueue] Web console line queue drained.
+[2025-06-04 07:21:10Z INFO JobServerQueue] Uploading 4 files in one shot.
+[2025-06-04 07:21:10Z INFO JobServerQueue] Try to upload 4 log files or attachments, success rate: 4/4.
+[2025-06-04 07:21:10Z INFO JobServerQueue] File upload queue drained.
+[2025-06-04 07:21:10Z INFO JobServerQueue] Starting results-based upload queue...
+[2025-06-04 07:21:10Z INFO JobServerQueue] Uploading 3 file(s) in one shot through results service.
+[2025-06-04 07:21:10Z INFO JobServerQueue] Got a step log file to send to results service.
+[2025-06-04 07:21:10Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, Z:\cloud-app\actions-runner\_diag\blocks\96745744-2e58-4a38-a4df-e9fd66620b99_0155234a-bba6-41c9-aec2-59caa6c03e28.1
+[2025-06-04 07:21:10Z INFO JobServerQueue] Got a step log file to send to results service.
+[2025-06-04 07:21:10Z INFO JobServerQueue] Starting upload of step log file to results service ResultsLog, Z:\cloud-app\actions-runner\_diag\blocks\96745744-2e58-4a38-a4df-e9fd66620b99_8ce981df-bea1-4e14-89bc-defff58043ed.1
+[2025-06-04 07:21:11Z INFO JobServerQueue] Got a job log file to send to results service.
+[2025-06-04 07:21:11Z INFO JobServerQueue] Starting upload of job log file to results service ResultsLog, Z:\cloud-app\actions-runner\_diag\blocks\96745744-2e58-4a38-a4df-e9fd66620b99_f64ab6aa-ef46-57c2-9099-dea868f4a703.1
+[2025-06-04 07:21:11Z INFO JobServerQueue] Tried to upload 3 file(s) to results, success rate: 3/3.
+[2025-06-04 07:21:11Z INFO JobServerQueue] Results upload queue drained.
+[2025-06-04 07:21:11Z INFO JobServerQueue] Timeline update queue drained.
+[2025-06-04 07:21:11Z INFO JobServerQueue] Disposing job server ...
+[2025-06-04 07:21:11Z INFO JobServerQueue] Disposing results server ...
+[2025-06-04 07:21:11Z INFO JobServerQueue] All queue process tasks have been stopped, and all queues are drained.
+[2025-06-04 07:21:11Z INFO TempDirectoryManager] Cleaning runner temp folder: Z:\cloud-app\actions-runner\_work\_temp
+[2025-06-04 07:21:11Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-04 07:21:11Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-04 07:21:11Z INFO HostContext] Well known directory 'Diag': 'Z:\cloud-app\actions-runner\_diag'
+[2025-06-04 07:21:11Z INFO HostContext] Well known config file 'Telemetry': 'Z:\cloud-app\actions-runner\_diag\.telemetry'
+[2025-06-04 07:21:11Z INFO JobRunner] Raising job completed against run service
+[2025-06-04 07:21:12Z INFO Worker] Job completed.

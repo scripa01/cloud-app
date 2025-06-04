@@ -1,0 +1,96 @@
+[2025-06-04 07:14:33Z INFO HostContext] No proxy settings were found based on environmental variables (http_proxy/https_proxy/HTTP_PROXY/HTTPS_PROXY)
+[2025-06-04 07:14:33Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\bin'
+[2025-06-04 07:14:33Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app'
+[2025-06-04 07:14:33Z INFO HostContext] Well known config file 'Credentials': 'Z:\cloud-app\.credentials'
+[2025-06-04 07:14:33Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\bin'
+[2025-06-04 07:14:33Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app'
+[2025-06-04 07:14:33Z INFO HostContext] Well known config file 'Runner': 'Z:\cloud-app\.runner'
+[2025-06-04 07:14:33Z INFO Listener] Runner is built for Windows (X64) - win-x64.
+[2025-06-04 07:14:33Z INFO Listener] RuntimeInformation: Microsoft Windows 10.0.19045.
+[2025-06-04 07:14:33Z INFO Listener] Version: 2.324.0
+[2025-06-04 07:14:33Z INFO Listener] Commit: da3412efd49b1cf1a0fbdcbcee4e4ac4cc2177c8
+[2025-06-04 07:14:33Z INFO Listener] Culture: ru-RU
+[2025-06-04 07:14:33Z INFO Listener] UI Culture: en-US
+[2025-06-04 07:14:33Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\bin'
+[2025-06-04 07:14:33Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app'
+[2025-06-04 07:14:33Z INFO Listener] Validating directory permissions for: 'Z:\cloud-app'
+[2025-06-04 07:14:33Z INFO CommandLineParser] Parse
+[2025-06-04 07:14:33Z INFO CommandLineParser] Parsing 3 args
+[2025-06-04 07:14:33Z INFO CommandLineParser] parsing argument
+[2025-06-04 07:14:33Z INFO CommandLineParser] HasArgs: False
+[2025-06-04 07:14:33Z INFO CommandLineParser] Adding Command: remove
+[2025-06-04 07:14:33Z INFO CommandLineParser] parsing argument
+[2025-06-04 07:14:33Z INFO CommandLineParser] HasArgs: True
+[2025-06-04 07:14:33Z INFO CommandLineParser] arg: token
+[2025-06-04 07:14:33Z INFO CommandLineParser] parsing argument
+[2025-06-04 07:14:33Z INFO CommandLineParser] HasArgs: True
+[2025-06-04 07:14:33Z INFO CommandLineParser] Adding option 'token': '***'
+[2025-06-04 07:14:33Z INFO Listener] Arguments parsed
+[2025-06-04 07:14:33Z INFO Runner] ExecuteCommand
+[2025-06-04 07:14:33Z INFO ConfigurationStore] currentAssemblyLocation: Z:\cloud-app\bin\Runner.Listener.dll
+[2025-06-04 07:14:33Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\bin'
+[2025-06-04 07:14:33Z INFO ConfigurationStore] binPath: Z:\cloud-app\bin
+[2025-06-04 07:14:33Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\bin'
+[2025-06-04 07:14:33Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app'
+[2025-06-04 07:14:33Z INFO ConfigurationStore] RootFolder: Z:\cloud-app
+[2025-06-04 07:14:33Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\bin'
+[2025-06-04 07:14:33Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app'
+[2025-06-04 07:14:33Z INFO HostContext] Well known config file 'Runner': 'Z:\cloud-app\.runner'
+[2025-06-04 07:14:33Z INFO ConfigurationStore] ConfigFilePath: Z:\cloud-app\.runner
+[2025-06-04 07:14:33Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\bin'
+[2025-06-04 07:14:33Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app'
+[2025-06-04 07:14:33Z INFO HostContext] Well known config file 'MigratedRunner': 'Z:\cloud-app\.runner_migrated'
+[2025-06-04 07:14:33Z INFO ConfigurationStore] MigratedConfigFilePath: Z:\cloud-app\.runner_migrated
+[2025-06-04 07:14:33Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\bin'
+[2025-06-04 07:14:33Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app'
+[2025-06-04 07:14:33Z INFO HostContext] Well known config file 'Credentials': 'Z:\cloud-app\.credentials'
+[2025-06-04 07:14:33Z INFO ConfigurationStore] CredFilePath: Z:\cloud-app\.credentials
+[2025-06-04 07:14:33Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\bin'
+[2025-06-04 07:14:33Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app'
+[2025-06-04 07:14:33Z INFO HostContext] Well known config file 'MigratedCredentials': 'Z:\cloud-app\.credentials_migrated'
+[2025-06-04 07:14:33Z INFO ConfigurationStore] MigratedCredFilePath: Z:\cloud-app\.credentials_migrated
+[2025-06-04 07:14:33Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\bin'
+[2025-06-04 07:14:33Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app'
+[2025-06-04 07:14:33Z INFO HostContext] Well known config file 'Service': 'Z:\cloud-app\.service'
+[2025-06-04 07:14:33Z INFO ConfigurationStore] ServiceConfigFilePath: Z:\cloud-app\.service
+[2025-06-04 07:14:33Z INFO CommandSettings] Flag 'help': 'False'
+[2025-06-04 07:14:33Z INFO CommandSettings] Flag 'version': 'False'
+[2025-06-04 07:14:33Z INFO CommandSettings] Flag 'commit': 'False'
+[2025-06-04 07:14:33Z INFO CommandSettings] Flag 'check': 'False'
+[2025-06-04 07:14:33Z INFO CommandSettings] Command 'configure': 'False'
+[2025-06-04 07:14:33Z INFO CommandSettings] Command 'remove': 'True'
+[2025-06-04 07:14:33Z INFO CommandSettings] Flag 'local': 'False'
+[2025-06-04 07:14:33Z INFO ConfigurationStore] IsServiceConfigured()
+[2025-06-04 07:14:33Z INFO ConfigurationStore] IsServiceConfigured: False
+[2025-06-04 07:14:33Z INFO ConfigurationStore] IsConfigured()
+[2025-06-04 07:14:33Z INFO ConfigurationStore] IsConfigured: True
+[2025-06-04 07:14:33Z INFO ConfigurationStore] HasCredentials()
+[2025-06-04 07:14:33Z INFO ConfigurationStore] stored True
+[2025-06-04 07:14:33Z INFO ConfigurationStore] Read setting file: 307 chars
+[2025-06-04 07:14:33Z INFO CommandSettings] Arg 'token': '***'
+[2025-06-04 07:14:33Z INFO CommandSettings] Remove token from Arg dictionary.
+[2025-06-04 07:14:33Z INFO ConfigurationManager] Http response code: OK from 'POST https://api.github.com/actions/runner-registration' (DF90:369BF4:2814B42:29747A6:683FF259)
+[2025-06-04 07:14:33Z INFO ConfigurationManager] cred retrieved via GitHub auth
+[2025-06-04 07:14:33Z INFO RunnerServer] EstablishVssConnection
+[2025-06-04 07:14:33Z INFO RunnerServer] Establish connection with 100 seconds timeout.
+[2025-06-04 07:14:33Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2025-06-04 07:14:33Z INFO RunnerServer] EstablishVssConnection
+[2025-06-04 07:14:33Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2025-06-04 07:14:33Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2025-06-04 07:14:33Z INFO RunnerServer] EstablishVssConnection
+[2025-06-04 07:14:33Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2025-06-04 07:14:33Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2025-06-04 07:14:34Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2025-06-04 07:14:34Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2025-06-04 07:14:34Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2025-06-04 07:14:35Z INFO Terminal] WRITE LINE: 
+[2025-06-04 07:14:35Z INFO ConfigurationStore] IsConfigured()
+[2025-06-04 07:14:35Z INFO ConfigurationStore] IsConfigured: True
+[2025-06-04 07:14:35Z INFO ConfigurationStore] HasCredentials()
+[2025-06-04 07:14:35Z INFO ConfigurationStore] stored True
+[2025-06-04 07:14:35Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\bin'
+[2025-06-04 07:14:35Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app'
+[2025-06-04 07:14:35Z INFO HostContext] Well known config file 'RSACredentials': 'Z:\cloud-app\.credentials_rsaparams'
+[2025-06-04 07:14:35Z INFO RSAEncryptedFileKeyManager] Deleting RSA key parameters file Z:\cloud-app\.credentials_rsaparams
+[2025-06-04 07:14:35Z INFO Terminal] WRITE LINE: 
+[2025-06-04 07:14:35Z INFO Listener] Runner execution has finished with return code 0

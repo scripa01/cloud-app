@@ -1,0 +1,12 @@
+﻿{
+  "repositoryName": "scripa01/cloud-app",
+  "pipelineDirectory": "cloud-app",
+  "workspaceDirectory": "cloud-app\\cloud-app",
+  "repositories": {
+    "scripa01/cloud-app": {
+      "repositoryPath": "cloud-app\\cloud-app",
+      "lastRunOn": "06/04/2025 10:21:01 +03:00"
+    }
+  },
+  "lastRunOn": "06/04/2025 10:21:01 +03:00"
+}
