@@ -6,26 +6,28 @@ on:
   workflow_dispatch:
 
 env:
-  IMAGE_NAME: cloud-app
+  IMAGE_NAME: ${{ secrets.DOCKER_USERNAME }}/cloud-app
 
 jobs:
   build-deploy:
-    runs-on: [self-hosted, Windows, X64]
+    runs-on: [ self-hosted, Windows, X64 ]
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout source code
+        uses: actions/checkout@v3
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
-      - name: Set up JDK 17
+      - name: Set up JDK
         uses: actions/setup-java@v3
         with:
           java-version: '17'
           distribution: 'temurin'
 
       - name: Build jar
-        run: .\gradlew.bat clean bootJar
+        run: .\gradlew.bat bootJar
+        shell: powershell
 
       - name: Log in to Docker Hub
         uses: docker/login-action@v3
@@ -37,32 +39,21 @@ jobs:
         id: tag
         shell: powershell
         run: |
-          $shortSha = "${{ github.sha }}".Substring(0,7)
+          $shortSha = "${{ github.sha }}".Substring(0, 7)
           echo "TAG=$shortSha" >> $env:GITHUB_ENV
 
       - name: Build Docker image
+        run: docker build -t cloud-app:$env:TAG .
         shell: powershell
-        run: |
-          $tag = $env:TAG
-          docker build -t "$env:IMAGE_NAME:$tag" .
 
-      - name: Tag for Docker Hub
+      - name: Tag Docker image for Docker Hub
+        run: docker tag cloud-app:$env:TAG ${{ secrets.DOCKER_USERNAME }}/cloud-app:$env:TAG
         shell: powershell
-        run: |
-          $imageName = $env:IMAGE_NAME
-          $tag       = $env:TAG
-          docker tag "$imageName:$tag" "${{ secrets.DOCKERHUB_USERNAME }}/$imageName:$tag"
 
-      - name: Push to Docker Hub
+      - name: Push Docker image
+        run: docker push ${{ secrets.DOCKER_USERNAME }}/cloud-app:$env:TAG
         shell: powershell
-        run: |
-          $imageName = $env:IMAGE_NAME
-          $tag       = $env:TAG
-          docker push "${{ secrets.DOCKERHUB_USERNAME }}/$imageName:$tag"
 
-      - name: Update Kubernetes Deployment
+      - name: Update Kubernetes deployment image
+        run: kubectl set image deployment/cloud-app cloud=${{ secrets.DOCKER_USERNAME }}/cloud-app:$env:TAG
         shell: powershell
-        run: |
-          $imageName = $env:IMAGE_NAME
-          $tag       = $env:TAG
-          kubectl set image deployment/cloud-app cloud-app="${{ secrets.DOCKERHUB_USERNAME }}/$imageName:$tag" --record

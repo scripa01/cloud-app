@@ -1,0 +1,429 @@
+[2025-06-09 16:42:07Z INFO HostContext] No proxy settings were found based on environmental variables (http_proxy/https_proxy/HTTP_PROXY/HTTPS_PROXY)
+[2025-06-09 16:42:07Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-09 16:42:07Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-09 16:42:07Z INFO HostContext] Well known config file 'Credentials': 'Z:\cloud-app\actions-runner\.credentials'
+[2025-06-09 16:42:07Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-09 16:42:07Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-09 16:42:07Z INFO HostContext] Well known config file 'Runner': 'Z:\cloud-app\actions-runner\.runner'
+[2025-06-09 16:42:07Z INFO Listener] Runner is built for Windows (X64) - win-x64.
+[2025-06-09 16:42:07Z INFO Listener] RuntimeInformation: Microsoft Windows 10.0.19045.
+[2025-06-09 16:42:07Z INFO Listener] Version: 2.324.0
+[2025-06-09 16:42:07Z INFO Listener] Commit: da3412efd49b1cf1a0fbdcbcee4e4ac4cc2177c8
+[2025-06-09 16:42:07Z INFO Listener] Culture: ru-RU
+[2025-06-09 16:42:07Z INFO Listener] UI Culture: en-US
+[2025-06-09 16:42:07Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-09 16:42:07Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-09 16:42:07Z INFO Listener] Validating directory permissions for: 'Z:\cloud-app\actions-runner'
+[2025-06-09 16:42:07Z INFO CommandLineParser] Parse
+[2025-06-09 16:42:07Z INFO CommandLineParser] Parsing 1 args
+[2025-06-09 16:42:07Z INFO CommandLineParser] parsing argument
+[2025-06-09 16:42:07Z INFO CommandLineParser] HasArgs: False
+[2025-06-09 16:42:07Z INFO CommandLineParser] Adding Command: run
+[2025-06-09 16:42:07Z INFO Listener] Arguments parsed
+[2025-06-09 16:42:07Z INFO Runner] ExecuteCommand
+[2025-06-09 16:42:07Z INFO ConfigurationStore] currentAssemblyLocation: Z:\cloud-app\actions-runner\bin\Runner.Listener.dll
+[2025-06-09 16:42:07Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-09 16:42:07Z INFO ConfigurationStore] binPath: Z:\cloud-app\actions-runner\bin
+[2025-06-09 16:42:07Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-09 16:42:07Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-09 16:42:07Z INFO ConfigurationStore] RootFolder: Z:\cloud-app\actions-runner
+[2025-06-09 16:42:07Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-09 16:42:07Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-09 16:42:07Z INFO HostContext] Well known config file 'Runner': 'Z:\cloud-app\actions-runner\.runner'
+[2025-06-09 16:42:07Z INFO ConfigurationStore] ConfigFilePath: Z:\cloud-app\actions-runner\.runner
+[2025-06-09 16:42:07Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-09 16:42:07Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-09 16:42:07Z INFO HostContext] Well known config file 'MigratedRunner': 'Z:\cloud-app\actions-runner\.runner_migrated'
+[2025-06-09 16:42:07Z INFO ConfigurationStore] MigratedConfigFilePath: Z:\cloud-app\actions-runner\.runner_migrated
+[2025-06-09 16:42:07Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-09 16:42:07Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-09 16:42:07Z INFO HostContext] Well known config file 'Credentials': 'Z:\cloud-app\actions-runner\.credentials'
+[2025-06-09 16:42:07Z INFO ConfigurationStore] CredFilePath: Z:\cloud-app\actions-runner\.credentials
+[2025-06-09 16:42:07Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-09 16:42:07Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-09 16:42:07Z INFO HostContext] Well known config file 'MigratedCredentials': 'Z:\cloud-app\actions-runner\.credentials_migrated'
+[2025-06-09 16:42:07Z INFO ConfigurationStore] MigratedCredFilePath: Z:\cloud-app\actions-runner\.credentials_migrated
+[2025-06-09 16:42:07Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-09 16:42:07Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-09 16:42:07Z INFO HostContext] Well known config file 'Service': 'Z:\cloud-app\actions-runner\.service'
+[2025-06-09 16:42:07Z INFO ConfigurationStore] ServiceConfigFilePath: Z:\cloud-app\actions-runner\.service
+[2025-06-09 16:42:07Z INFO CommandSettings] Flag 'help': 'False'
+[2025-06-09 16:42:07Z INFO CommandSettings] Flag 'version': 'False'
+[2025-06-09 16:42:07Z INFO CommandSettings] Flag 'commit': 'False'
+[2025-06-09 16:42:07Z INFO CommandSettings] Flag 'check': 'False'
+[2025-06-09 16:42:07Z INFO CommandSettings] Command 'configure': 'False'
+[2025-06-09 16:42:07Z INFO CommandSettings] Command 'remove': 'False'
+[2025-06-09 16:42:07Z INFO CommandSettings] Command 'warmup': 'False'
+[2025-06-09 16:42:07Z INFO ConfigurationManager] LoadSettings
+[2025-06-09 16:42:07Z INFO ConfigurationStore] IsConfigured()
+[2025-06-09 16:42:07Z INFO ConfigurationStore] IsConfigured: True
+[2025-06-09 16:42:07Z INFO ConfigurationManager] Is configured: True
+[2025-06-09 16:42:07Z INFO ConfigurationStore] Read setting file: 307 chars
+[2025-06-09 16:42:07Z INFO ConfigurationManager] Settings Loaded
+[2025-06-09 16:42:07Z INFO ConfigurationStore] IsServiceConfigured()
+[2025-06-09 16:42:07Z INFO ConfigurationStore] IsServiceConfigured: False
+[2025-06-09 16:42:07Z INFO CommandSettings] Command 'run': 'True'
+[2025-06-09 16:42:07Z INFO ConfigurationStore] IsConfigured()
+[2025-06-09 16:42:07Z INFO ConfigurationStore] IsConfigured: True
+[2025-06-09 16:42:07Z INFO ConfigurationManager] Is configured: True
+[2025-06-09 16:42:07Z INFO Runner] Could not parse the argument value '' for StartupType. Defaulting to Manual
+[2025-06-09 16:42:07Z INFO Runner] Set runner startup type - Manual
+[2025-06-09 16:42:07Z INFO CommandSettings] Flag 'once': 'False'
+[2025-06-09 16:42:07Z INFO CommandSettings] Flag 'once': 'False'
+[2025-06-09 16:42:07Z INFO Runner] RunAsync
+[2025-06-09 16:42:07Z INFO ConfigurationManager] LoadMigratedSettings
+[2025-06-09 16:42:07Z INFO ConfigurationStore] IsMigratedConfigured()
+[2025-06-09 16:42:07Z INFO ConfigurationStore] IsMigratedConfigured: False
+[2025-06-09 16:42:07Z INFO Runner] Failed to load migrated settings: No migrated configuration found.
+[2025-06-09 16:42:07Z INFO Runner] Falling back to original .runner settings
+[2025-06-09 16:42:07Z INFO ConfigurationManager] LoadSettings
+[2025-06-09 16:42:07Z INFO ConfigurationStore] IsConfigured()
+[2025-06-09 16:42:07Z INFO ConfigurationStore] IsConfigured: True
+[2025-06-09 16:42:07Z INFO ConfigurationManager] Is configured: True
+[2025-06-09 16:42:07Z INFO ConfigurationManager] Settings Loaded
+[2025-06-09 16:42:07Z INFO MessageListener] {
+  "AgentId": 3,
+  "AgentName": "DESKTOP-OO39IGI",
+  "PoolId": 1,
+  "PoolName": "Default",
+  "ServerUrl": "https://pipelinesghubeus9.actions.githubusercontent.com/ESlaa3iftPqjK7NPXG6VSk7T6ccaW0JKxrTlyluZJElv8XYnXx/",
+  "GitHubUrl": "https://github.com/scripa01/cloud-app",
+  "WorkFolder": "_work"
+}
+[2025-06-09 16:42:07Z INFO MessageListener] Loading Credentials
+[2025-06-09 16:42:07Z INFO ConfigurationStore] HasCredentials()
+[2025-06-09 16:42:07Z INFO ConfigurationStore] stored True
+[2025-06-09 16:42:07Z INFO CredentialManager] GetCredentialProvider
+[2025-06-09 16:42:07Z INFO CredentialManager] Creating type OAuth
+[2025-06-09 16:42:07Z INFO CredentialManager] Creating credential type: OAuth
+[2025-06-09 16:42:07Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-09 16:42:07Z INFO HostContext] Well known directory 'Root': 'Z:\cloud-app\actions-runner'
+[2025-06-09 16:42:07Z INFO HostContext] Well known config file 'RSACredentials': 'Z:\cloud-app\actions-runner\.credentials_rsaparams'
+[2025-06-09 16:42:07Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file Z:\cloud-app\actions-runner\.credentials_rsaparams
+[2025-06-09 16:42:07Z INFO MessageListener] Attempt to create session.
+[2025-06-09 16:42:07Z INFO MessageListener] Connecting to the Runner Server...
+[2025-06-09 16:42:07Z INFO RunnerServer] EstablishVssConnection
+[2025-06-09 16:42:07Z INFO RunnerServer] Establish connection with 100 seconds timeout.
+[2025-06-09 16:42:07Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2025-06-09 16:42:07Z INFO RunnerServer] EstablishVssConnection
+[2025-06-09 16:42:07Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2025-06-09 16:42:07Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2025-06-09 16:42:07Z INFO RunnerServer] EstablishVssConnection
+[2025-06-09 16:42:07Z INFO RunnerServer] Establish connection with 60 seconds timeout.
+[2025-06-09 16:42:07Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2025-06-09 16:42:07Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2025-06-09 16:42:07Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2025-06-09 16:42:07Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2025-06-09 16:42:08Z INFO MessageListener] VssConnection created
+[2025-06-09 16:42:08Z INFO Terminal] WRITE LINE: 
+[2025-06-09 16:42:08Z INFO Terminal] WRITE LINE: 
+[2025-06-09 16:42:08Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file Z:\cloud-app\actions-runner\.credentials_rsaparams
+[2025-06-09 16:42:08Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file Z:\cloud-app\actions-runner\.credentials_rsaparams
+[2025-06-09 16:42:08Z INFO GitHubActionsService] AAD Correlation ID for this token request: Unknown
+[2025-06-09 16:42:09Z INFO MessageListener] Session created.
+[2025-06-09 16:42:09Z INFO MessageListener] Registering AuthMigrationChanged event handler.
+[2025-06-09 16:42:09Z INFO Terminal] WRITE LINE: Current runner version: '2.324.0'
+[2025-06-09 16:42:09Z INFO Terminal] WRITE LINE: 2025-06-09 16:42:09Z: Listening for Jobs
+[2025-06-09 16:42:09Z INFO JobDispatcher] Set runner/worker IPC timeout to 30 seconds.
+[2025-06-09 16:42:09Z INFO ConfigurationStore] HasCredentials()
+[2025-06-09 16:42:09Z INFO ConfigurationStore] stored True
+[2025-06-09 16:42:09Z INFO CredentialManager] GetCredentialProvider
+[2025-06-09 16:42:09Z INFO CredentialManager] Creating type OAuth
+[2025-06-09 16:42:09Z INFO CredentialManager] Creating credential type: OAuth
+[2025-06-09 16:42:09Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file Z:\cloud-app\actions-runner\.credentials_rsaparams
+[2025-06-09 16:42:09Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file Z:\cloud-app\actions-runner\.credentials_rsaparams
+[2025-06-09 16:42:09Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file Z:\cloud-app\actions-runner\.credentials_rsaparams
+[2025-06-09 16:42:09Z INFO GitHubActionsService] AAD Correlation ID for this token request: Unknown
+[2025-06-09 16:42:11Z INFO MessageListener] Message '1730876222755631266' received from session 'ff7612a8-87d0-4c2b-b18d-47ec315131f1'.
+[2025-06-09 16:42:11Z INFO ConfigurationStore] HasCredentials()
+[2025-06-09 16:42:11Z INFO ConfigurationStore] stored True
+[2025-06-09 16:42:11Z INFO CredentialManager] GetCredentialProvider
+[2025-06-09 16:42:11Z INFO CredentialManager] Creating type OAuth
+[2025-06-09 16:42:11Z INFO CredentialManager] Creating credential type: OAuth
+[2025-06-09 16:42:11Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file Z:\cloud-app\actions-runner\.credentials_rsaparams
+[2025-06-09 16:42:11Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file Z:\cloud-app\actions-runner\.credentials_rsaparams
+[2025-06-09 16:42:11Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file Z:\cloud-app\actions-runner\.credentials_rsaparams
+[2025-06-09 16:42:11Z INFO GitHubActionsService] AAD Correlation ID for this token request: Unknown
+[2025-06-09 16:42:13Z INFO JobDispatcher] Job request 0 for plan 4ae593e2-689c-4f26-accc-4830a4bcd1aa job a8b8e95f-cde2-572a-8a79-a8c33ae1ee64 received.
+[2025-06-09 16:42:13Z INFO MessageListener] Received job status event. JobState: Busy
+[2025-06-09 16:42:13Z INFO MessageListener] _getMessagesTokenSource is already disposed.
+[2025-06-09 16:42:13Z INFO Terminal] WRITE LINE: 2025-06-09 16:42:13Z: Running job: build-deploy
+[2025-06-09 16:42:13Z INFO JobDispatcher] Start renew job request 0 for job a8b8e95f-cde2-572a-8a79-a8c33ae1ee64.
+[2025-06-09 16:42:13Z INFO JobDispatcher] Successfully renew job a8b8e95f-cde2-572a-8a79-a8c33ae1ee64, job is valid till 09.06.2025 16:52:13
+[2025-06-09 16:42:13Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-09 16:42:13Z INFO ProcessInvokerWrapper] Starting process:
+[2025-06-09 16:42:13Z INFO ProcessInvokerWrapper]   File name: 'Z:\cloud-app\actions-runner\bin\Runner.Worker.exe'
+[2025-06-09 16:42:13Z INFO ProcessInvokerWrapper]   Arguments: 'spawnclient 2212 2240'
+[2025-06-09 16:42:13Z INFO ProcessInvokerWrapper]   Working directory: 'Z:\cloud-app\actions-runner\bin'
+[2025-06-09 16:42:13Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-06-09 16:42:13Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2025-06-09 16:42:13Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'True'
+[2025-06-09 16:42:13Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-06-09 16:42:13Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2025-06-09 16:42:13Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-06-09 16:42:13Z INFO ProcessInvokerWrapper]   High priority process: 'True'
+[2025-06-09 16:42:13Z INFO ProcessInvokerWrapper] Process started with process id 28232, waiting for process exit.
+[2025-06-09 16:42:13Z INFO JobDispatcher] Send job request message to worker for job a8b8e95f-cde2-572a-8a79-a8c33ae1ee64.
+[2025-06-09 16:42:13Z INFO ProcessChannel] Sending message of length 22956, with hash 'f3a07e87404c93fe0b8ab5ed75d959f630192f640fd992d8ce64de2216985f00'
+[2025-06-09 16:42:13Z INFO JobNotification] Entering JobStarted Notification
+[2025-06-09 16:42:13Z INFO JobNotification] Entering StartMonitor
+[2025-06-09 16:42:14Z INFO ConfigurationStore] HasCredentials()
+[2025-06-09 16:42:14Z INFO ConfigurationStore] stored True
+[2025-06-09 16:42:14Z INFO CredentialManager] GetCredentialProvider
+[2025-06-09 16:42:14Z INFO CredentialManager] Creating type OAuth
+[2025-06-09 16:42:14Z INFO CredentialManager] Creating credential type: OAuth
+[2025-06-09 16:42:14Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file Z:\cloud-app\actions-runner\.credentials_rsaparams
+[2025-06-09 16:42:52Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-06-09 16:42:52Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-06-09 16:42:52Z INFO ProcessInvokerWrapper] Finished process 28232 with exit code 102, and elapsed time 00:00:39.3629861.
+[2025-06-09 16:42:52Z INFO JobDispatcher] Worker finished for job a8b8e95f-cde2-572a-8a79-a8c33ae1ee64. Code: 102
+[2025-06-09 16:42:52Z INFO JobDispatcher] finish job request for job a8b8e95f-cde2-572a-8a79-a8c33ae1ee64 with result: Failed
+[2025-06-09 16:42:52Z INFO Terminal] WRITE LINE: 2025-06-09 16:42:52Z: Job build-deploy completed with result: Failed
+[2025-06-09 16:42:52Z INFO JobDispatcher] Stop renew job request for job a8b8e95f-cde2-572a-8a79-a8c33ae1ee64.
+[2025-06-09 16:42:52Z INFO JobDispatcher] job renew has been cancelled, stop renew job a8b8e95f-cde2-572a-8a79-a8c33ae1ee64.
+[2025-06-09 16:42:52Z INFO JobNotification] Entering JobCompleted Notification
+[2025-06-09 16:42:52Z INFO JobNotification] Entering EndMonitor
+[2025-06-09 16:42:52Z INFO MessageListener] Received job status event. JobState: Online
+[2025-06-09 16:43:04Z INFO ConfigurationStore] HasCredentials()
+[2025-06-09 16:43:04Z INFO ConfigurationStore] stored True
+[2025-06-09 16:43:04Z INFO CredentialManager] GetCredentialProvider
+[2025-06-09 16:43:04Z INFO CredentialManager] Creating type OAuth
+[2025-06-09 16:43:04Z INFO CredentialManager] Creating credential type: OAuth
+[2025-06-09 16:43:04Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file Z:\cloud-app\actions-runner\.credentials_rsaparams
+[2025-06-09 16:43:55Z INFO ConfigurationStore] HasCredentials()
+[2025-06-09 16:43:55Z INFO ConfigurationStore] stored True
+[2025-06-09 16:43:55Z INFO CredentialManager] GetCredentialProvider
+[2025-06-09 16:43:55Z INFO CredentialManager] Creating type OAuth
+[2025-06-09 16:43:55Z INFO CredentialManager] Creating credential type: OAuth
+[2025-06-09 16:43:55Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file Z:\cloud-app\actions-runner\.credentials_rsaparams
+[2025-06-09 16:44:37Z INFO MessageListener] Message '339990688546816151' received from session 'ff7612a8-87d0-4c2b-b18d-47ec315131f1'.
+[2025-06-09 16:44:37Z INFO ConfigurationStore] HasCredentials()
+[2025-06-09 16:44:37Z INFO ConfigurationStore] stored True
+[2025-06-09 16:44:37Z INFO CredentialManager] GetCredentialProvider
+[2025-06-09 16:44:37Z INFO CredentialManager] Creating type OAuth
+[2025-06-09 16:44:37Z INFO CredentialManager] Creating credential type: OAuth
+[2025-06-09 16:44:37Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file Z:\cloud-app\actions-runner\.credentials_rsaparams
+[2025-06-09 16:44:37Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file Z:\cloud-app\actions-runner\.credentials_rsaparams
+[2025-06-09 16:44:37Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file Z:\cloud-app\actions-runner\.credentials_rsaparams
+[2025-06-09 16:44:37Z INFO GitHubActionsService] AAD Correlation ID for this token request: Unknown
+[2025-06-09 16:44:38Z INFO JobDispatcher] Job request 0 for plan d1fdddca-32be-4345-8c93-57b49ac989d6 job 83528a55-0e75-598a-bec8-0324bcd1d523 received.
+[2025-06-09 16:44:38Z INFO MessageListener] Received job status event. JobState: Busy
+[2025-06-09 16:44:38Z INFO MessageListener] _getMessagesTokenSource is already disposed.
+[2025-06-09 16:44:38Z INFO JobDispatcher] Job request a8b8e95f-cde2-572a-8a79-a8c33ae1ee64 processed succeed.
+[2025-06-09 16:44:38Z INFO Terminal] WRITE LINE: 2025-06-09 16:44:38Z: Running job: build-deploy
+[2025-06-09 16:44:38Z INFO JobDispatcher] Start renew job request 0 for job 83528a55-0e75-598a-bec8-0324bcd1d523.
+[2025-06-09 16:44:39Z INFO JobDispatcher] Successfully renew job 83528a55-0e75-598a-bec8-0324bcd1d523, job is valid till 09.06.2025 16:54:39
+[2025-06-09 16:44:39Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-09 16:44:39Z INFO ProcessInvokerWrapper] Starting process:
+[2025-06-09 16:44:39Z INFO ProcessInvokerWrapper]   File name: 'Z:\cloud-app\actions-runner\bin\Runner.Worker.exe'
+[2025-06-09 16:44:39Z INFO ProcessInvokerWrapper]   Arguments: 'spawnclient 1564 1552'
+[2025-06-09 16:44:39Z INFO ProcessInvokerWrapper]   Working directory: 'Z:\cloud-app\actions-runner\bin'
+[2025-06-09 16:44:39Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-06-09 16:44:39Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2025-06-09 16:44:39Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'True'
+[2025-06-09 16:44:39Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-06-09 16:44:39Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2025-06-09 16:44:39Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-06-09 16:44:39Z INFO ProcessInvokerWrapper]   High priority process: 'True'
+[2025-06-09 16:44:39Z INFO ProcessInvokerWrapper] Process started with process id 29056, waiting for process exit.
+[2025-06-09 16:44:39Z INFO JobDispatcher] Send job request message to worker for job 83528a55-0e75-598a-bec8-0324bcd1d523.
+[2025-06-09 16:44:39Z INFO ProcessChannel] Sending message of length 22957, with hash '2f7d1e9e15c43076a8d6d92d3c45a5320f45fe3adb62d12f43bfd77c3e608002'
+[2025-06-09 16:44:39Z INFO JobNotification] Entering JobStarted Notification
+[2025-06-09 16:44:39Z INFO JobNotification] Entering StartMonitor
+[2025-06-09 16:44:40Z INFO ConfigurationStore] HasCredentials()
+[2025-06-09 16:44:40Z INFO ConfigurationStore] stored True
+[2025-06-09 16:44:40Z INFO CredentialManager] GetCredentialProvider
+[2025-06-09 16:44:40Z INFO CredentialManager] Creating type OAuth
+[2025-06-09 16:44:40Z INFO CredentialManager] Creating credential type: OAuth
+[2025-06-09 16:44:40Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file Z:\cloud-app\actions-runner\.credentials_rsaparams
+[2025-06-09 16:45:13Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-06-09 16:45:13Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-06-09 16:45:13Z INFO ProcessInvokerWrapper] Finished process 29056 with exit code 102, and elapsed time 00:00:33.8630094.
+[2025-06-09 16:45:13Z INFO JobDispatcher] Worker finished for job 83528a55-0e75-598a-bec8-0324bcd1d523. Code: 102
+[2025-06-09 16:45:13Z INFO JobDispatcher] finish job request for job 83528a55-0e75-598a-bec8-0324bcd1d523 with result: Failed
+[2025-06-09 16:45:13Z INFO Terminal] WRITE LINE: 2025-06-09 16:45:13Z: Job build-deploy completed with result: Failed
+[2025-06-09 16:45:13Z INFO JobDispatcher] Stop renew job request for job 83528a55-0e75-598a-bec8-0324bcd1d523.
+[2025-06-09 16:45:13Z INFO JobDispatcher] job renew has been cancelled, stop renew job 83528a55-0e75-598a-bec8-0324bcd1d523.
+[2025-06-09 16:45:13Z INFO JobNotification] Entering JobCompleted Notification
+[2025-06-09 16:45:13Z INFO JobNotification] Entering EndMonitor
+[2025-06-09 16:45:13Z INFO MessageListener] Received job status event. JobState: Online
+[2025-06-09 16:45:30Z INFO ConfigurationStore] HasCredentials()
+[2025-06-09 16:45:30Z INFO ConfigurationStore] stored True
+[2025-06-09 16:45:30Z INFO CredentialManager] GetCredentialProvider
+[2025-06-09 16:45:30Z INFO CredentialManager] Creating type OAuth
+[2025-06-09 16:45:30Z INFO CredentialManager] Creating credential type: OAuth
+[2025-06-09 16:45:30Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file Z:\cloud-app\actions-runner\.credentials_rsaparams
+[2025-06-09 16:46:21Z INFO ConfigurationStore] HasCredentials()
+[2025-06-09 16:46:21Z INFO ConfigurationStore] stored True
+[2025-06-09 16:46:21Z INFO CredentialManager] GetCredentialProvider
+[2025-06-09 16:46:21Z INFO CredentialManager] Creating type OAuth
+[2025-06-09 16:46:21Z INFO CredentialManager] Creating credential type: OAuth
+[2025-06-09 16:46:21Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file Z:\cloud-app\actions-runner\.credentials_rsaparams
+[2025-06-09 16:46:54Z INFO MessageListener] Message '419065399882750978' received from session 'ff7612a8-87d0-4c2b-b18d-47ec315131f1'.
+[2025-06-09 16:46:54Z INFO ConfigurationStore] HasCredentials()
+[2025-06-09 16:46:54Z INFO ConfigurationStore] stored True
+[2025-06-09 16:46:54Z INFO CredentialManager] GetCredentialProvider
+[2025-06-09 16:46:54Z INFO CredentialManager] Creating type OAuth
+[2025-06-09 16:46:54Z INFO CredentialManager] Creating credential type: OAuth
+[2025-06-09 16:46:54Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file Z:\cloud-app\actions-runner\.credentials_rsaparams
+[2025-06-09 16:46:54Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file Z:\cloud-app\actions-runner\.credentials_rsaparams
+[2025-06-09 16:46:54Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file Z:\cloud-app\actions-runner\.credentials_rsaparams
+[2025-06-09 16:46:55Z INFO GitHubActionsService] AAD Correlation ID for this token request: Unknown
+[2025-06-09 16:46:56Z INFO JobDispatcher] Job request 0 for plan 082a1beb-4f47-44c4-ae5c-a40a7848aa2e job 8dd08373-663a-5500-b4a5-06476cf03732 received.
+[2025-06-09 16:46:56Z INFO MessageListener] Received job status event. JobState: Busy
+[2025-06-09 16:46:56Z INFO MessageListener] _getMessagesTokenSource is already disposed.
+[2025-06-09 16:46:56Z INFO JobDispatcher] Job request 83528a55-0e75-598a-bec8-0324bcd1d523 processed succeed.
+[2025-06-09 16:46:56Z INFO Terminal] WRITE LINE: 2025-06-09 16:46:56Z: Running job: build-deploy
+[2025-06-09 16:46:56Z INFO JobDispatcher] Start renew job request 0 for job 8dd08373-663a-5500-b4a5-06476cf03732.
+[2025-06-09 16:46:56Z INFO JobDispatcher] Successfully renew job 8dd08373-663a-5500-b4a5-06476cf03732, job is valid till 09.06.2025 16:56:56
+[2025-06-09 16:46:56Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-09 16:46:56Z INFO ProcessInvokerWrapper] Starting process:
+[2025-06-09 16:46:56Z INFO ProcessInvokerWrapper]   File name: 'Z:\cloud-app\actions-runner\bin\Runner.Worker.exe'
+[2025-06-09 16:46:56Z INFO ProcessInvokerWrapper]   Arguments: 'spawnclient 600 2316'
+[2025-06-09 16:46:56Z INFO ProcessInvokerWrapper]   Working directory: 'Z:\cloud-app\actions-runner\bin'
+[2025-06-09 16:46:56Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-06-09 16:46:56Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2025-06-09 16:46:56Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'True'
+[2025-06-09 16:46:56Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-06-09 16:46:56Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2025-06-09 16:46:56Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-06-09 16:46:56Z INFO ProcessInvokerWrapper]   High priority process: 'True'
+[2025-06-09 16:46:56Z INFO ProcessInvokerWrapper] Process started with process id 29104, waiting for process exit.
+[2025-06-09 16:46:56Z INFO JobDispatcher] Send job request message to worker for job 8dd08373-663a-5500-b4a5-06476cf03732.
+[2025-06-09 16:46:56Z INFO ProcessChannel] Sending message of length 23075, with hash 'a3aa107cee23442d961e687e03df7c6c8689033af806146d20cbdeed5e7d5445'
+[2025-06-09 16:46:56Z INFO JobNotification] Entering JobStarted Notification
+[2025-06-09 16:46:56Z INFO JobNotification] Entering StartMonitor
+[2025-06-09 16:46:57Z INFO ConfigurationStore] HasCredentials()
+[2025-06-09 16:46:57Z INFO ConfigurationStore] stored True
+[2025-06-09 16:46:57Z INFO CredentialManager] GetCredentialProvider
+[2025-06-09 16:46:57Z INFO CredentialManager] Creating type OAuth
+[2025-06-09 16:46:57Z INFO CredentialManager] Creating credential type: OAuth
+[2025-06-09 16:46:57Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file Z:\cloud-app\actions-runner\.credentials_rsaparams
+[2025-06-09 16:47:32Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-06-09 16:47:32Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-06-09 16:47:32Z INFO ProcessInvokerWrapper] Finished process 29104 with exit code 102, and elapsed time 00:00:35.8487404.
+[2025-06-09 16:47:32Z INFO JobDispatcher] Worker finished for job 8dd08373-663a-5500-b4a5-06476cf03732. Code: 102
+[2025-06-09 16:47:32Z INFO JobDispatcher] finish job request for job 8dd08373-663a-5500-b4a5-06476cf03732 with result: Failed
+[2025-06-09 16:47:32Z INFO Terminal] WRITE LINE: 2025-06-09 16:47:32Z: Job build-deploy completed with result: Failed
+[2025-06-09 16:47:32Z INFO JobDispatcher] Stop renew job request for job 8dd08373-663a-5500-b4a5-06476cf03732.
+[2025-06-09 16:47:32Z INFO JobDispatcher] job renew has been cancelled, stop renew job 8dd08373-663a-5500-b4a5-06476cf03732.
+[2025-06-09 16:47:32Z INFO JobNotification] Entering JobCompleted Notification
+[2025-06-09 16:47:32Z INFO JobNotification] Entering EndMonitor
+[2025-06-09 16:47:32Z INFO MessageListener] Received job status event. JobState: Online
+[2025-06-09 16:47:48Z INFO ConfigurationStore] HasCredentials()
+[2025-06-09 16:47:48Z INFO ConfigurationStore] stored True
+[2025-06-09 16:47:48Z INFO CredentialManager] GetCredentialProvider
+[2025-06-09 16:47:48Z INFO CredentialManager] Creating type OAuth
+[2025-06-09 16:47:48Z INFO CredentialManager] Creating credential type: OAuth
+[2025-06-09 16:47:48Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file Z:\cloud-app\actions-runner\.credentials_rsaparams
+[2025-06-09 16:48:38Z INFO ConfigurationStore] HasCredentials()
+[2025-06-09 16:48:38Z INFO ConfigurationStore] stored True
+[2025-06-09 16:48:38Z INFO CredentialManager] GetCredentialProvider
+[2025-06-09 16:48:38Z INFO CredentialManager] Creating type OAuth
+[2025-06-09 16:48:38Z INFO CredentialManager] Creating credential type: OAuth
+[2025-06-09 16:48:38Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file Z:\cloud-app\actions-runner\.credentials_rsaparams
+[2025-06-09 16:49:29Z INFO ConfigurationStore] HasCredentials()
+[2025-06-09 16:49:29Z INFO ConfigurationStore] stored True
+[2025-06-09 16:49:29Z INFO CredentialManager] GetCredentialProvider
+[2025-06-09 16:49:29Z INFO CredentialManager] Creating type OAuth
+[2025-06-09 16:49:29Z INFO CredentialManager] Creating credential type: OAuth
+[2025-06-09 16:49:29Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file Z:\cloud-app\actions-runner\.credentials_rsaparams
+[2025-06-09 16:50:19Z INFO ConfigurationStore] HasCredentials()
+[2025-06-09 16:50:19Z INFO ConfigurationStore] stored True
+[2025-06-09 16:50:19Z INFO CredentialManager] GetCredentialProvider
+[2025-06-09 16:50:19Z INFO CredentialManager] Creating type OAuth
+[2025-06-09 16:50:19Z INFO CredentialManager] Creating credential type: OAuth
+[2025-06-09 16:50:19Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file Z:\cloud-app\actions-runner\.credentials_rsaparams
+[2025-06-09 16:51:10Z INFO ConfigurationStore] HasCredentials()
+[2025-06-09 16:51:10Z INFO ConfigurationStore] stored True
+[2025-06-09 16:51:10Z INFO CredentialManager] GetCredentialProvider
+[2025-06-09 16:51:10Z INFO CredentialManager] Creating type OAuth
+[2025-06-09 16:51:10Z INFO CredentialManager] Creating credential type: OAuth
+[2025-06-09 16:51:10Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file Z:\cloud-app\actions-runner\.credentials_rsaparams
+[2025-06-09 16:52:01Z INFO ConfigurationStore] HasCredentials()
+[2025-06-09 16:52:01Z INFO ConfigurationStore] stored True
+[2025-06-09 16:52:01Z INFO CredentialManager] GetCredentialProvider
+[2025-06-09 16:52:01Z INFO CredentialManager] Creating type OAuth
+[2025-06-09 16:52:01Z INFO CredentialManager] Creating credential type: OAuth
+[2025-06-09 16:52:01Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file Z:\cloud-app\actions-runner\.credentials_rsaparams
+[2025-06-09 16:52:51Z INFO ConfigurationStore] HasCredentials()
+[2025-06-09 16:52:51Z INFO ConfigurationStore] stored True
+[2025-06-09 16:52:51Z INFO CredentialManager] GetCredentialProvider
+[2025-06-09 16:52:51Z INFO CredentialManager] Creating type OAuth
+[2025-06-09 16:52:51Z INFO CredentialManager] Creating credential type: OAuth
+[2025-06-09 16:52:51Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file Z:\cloud-app\actions-runner\.credentials_rsaparams
+[2025-06-09 16:52:56Z INFO MessageListener] Message '8029305345117170976' received from session 'ff7612a8-87d0-4c2b-b18d-47ec315131f1'.
+[2025-06-09 16:52:56Z INFO ConfigurationStore] HasCredentials()
+[2025-06-09 16:52:56Z INFO ConfigurationStore] stored True
+[2025-06-09 16:52:56Z INFO CredentialManager] GetCredentialProvider
+[2025-06-09 16:52:56Z INFO CredentialManager] Creating type OAuth
+[2025-06-09 16:52:56Z INFO CredentialManager] Creating credential type: OAuth
+[2025-06-09 16:52:56Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file Z:\cloud-app\actions-runner\.credentials_rsaparams
+[2025-06-09 16:52:56Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file Z:\cloud-app\actions-runner\.credentials_rsaparams
+[2025-06-09 16:52:56Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file Z:\cloud-app\actions-runner\.credentials_rsaparams
+[2025-06-09 16:52:56Z INFO GitHubActionsService] AAD Correlation ID for this token request: Unknown
+[2025-06-09 16:52:57Z INFO JobDispatcher] Job request 0 for plan 12e18b43-ef61-4f49-bad0-0cf59e37a7fd job acd3771d-085a-5bdc-9bb7-0d7764ef6e9f received.
+[2025-06-09 16:52:57Z INFO MessageListener] Received job status event. JobState: Busy
+[2025-06-09 16:52:57Z INFO MessageListener] _getMessagesTokenSource is already disposed.
+[2025-06-09 16:52:57Z INFO JobDispatcher] Job request 8dd08373-663a-5500-b4a5-06476cf03732 processed succeed.
+[2025-06-09 16:52:57Z INFO Terminal] WRITE LINE: 2025-06-09 16:52:57Z: Running job: build-deploy
+[2025-06-09 16:52:57Z INFO JobDispatcher] Start renew job request 0 for job acd3771d-085a-5bdc-9bb7-0d7764ef6e9f.
+[2025-06-09 16:52:58Z INFO JobDispatcher] Successfully renew job acd3771d-085a-5bdc-9bb7-0d7764ef6e9f, job is valid till 09.06.2025 17:02:58
+[2025-06-09 16:52:58Z INFO HostContext] Well known directory 'Bin': 'Z:\cloud-app\actions-runner\bin'
+[2025-06-09 16:52:58Z INFO ProcessInvokerWrapper] Starting process:
+[2025-06-09 16:52:58Z INFO ProcessInvokerWrapper]   File name: 'Z:\cloud-app\actions-runner\bin\Runner.Worker.exe'
+[2025-06-09 16:52:58Z INFO ProcessInvokerWrapper]   Arguments: 'spawnclient 2512 2524'
+[2025-06-09 16:52:58Z INFO ProcessInvokerWrapper]   Working directory: 'Z:\cloud-app\actions-runner\bin'
+[2025-06-09 16:52:58Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2025-06-09 16:52:58Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2025-06-09 16:52:58Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'True'
+[2025-06-09 16:52:58Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2025-06-09 16:52:58Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2025-06-09 16:52:58Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2025-06-09 16:52:58Z INFO ProcessInvokerWrapper]   High priority process: 'True'
+[2025-06-09 16:52:58Z INFO ProcessInvokerWrapper] Process started with process id 29452, waiting for process exit.
+[2025-06-09 16:52:58Z INFO JobDispatcher] Send job request message to worker for job acd3771d-085a-5bdc-9bb7-0d7764ef6e9f.
+[2025-06-09 16:52:58Z INFO ProcessChannel] Sending message of length 23201, with hash 'c6dd2be13e704c8a443446d4c0611c2660402fc563d59b4f2d5bc957e6337b41'
+[2025-06-09 16:52:58Z INFO JobNotification] Entering JobStarted Notification
+[2025-06-09 16:52:58Z INFO JobNotification] Entering StartMonitor
+[2025-06-09 16:52:58Z INFO ConfigurationStore] HasCredentials()
+[2025-06-09 16:52:58Z INFO ConfigurationStore] stored True
+[2025-06-09 16:52:58Z INFO CredentialManager] GetCredentialProvider
+[2025-06-09 16:52:58Z INFO CredentialManager] Creating type OAuth
+[2025-06-09 16:52:58Z INFO CredentialManager] Creating credential type: OAuth
+[2025-06-09 16:52:58Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file Z:\cloud-app\actions-runner\.credentials_rsaparams
+[2025-06-09 16:53:34Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-06-09 16:53:34Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2025-06-09 16:53:34Z INFO ProcessInvokerWrapper] Finished process 29452 with exit code 102, and elapsed time 00:00:36.0153150.
+[2025-06-09 16:53:34Z INFO JobDispatcher] Worker finished for job acd3771d-085a-5bdc-9bb7-0d7764ef6e9f. Code: 102
+[2025-06-09 16:53:34Z INFO JobDispatcher] finish job request for job acd3771d-085a-5bdc-9bb7-0d7764ef6e9f with result: Failed
+[2025-06-09 16:53:34Z INFO Terminal] WRITE LINE: 2025-06-09 16:53:34Z: Job build-deploy completed with result: Failed
+[2025-06-09 16:53:34Z INFO JobDispatcher] Stop renew job request for job acd3771d-085a-5bdc-9bb7-0d7764ef6e9f.
+[2025-06-09 16:53:34Z INFO JobDispatcher] job renew has been cancelled, stop renew job acd3771d-085a-5bdc-9bb7-0d7764ef6e9f.
+[2025-06-09 16:53:34Z INFO JobNotification] Entering JobCompleted Notification
+[2025-06-09 16:53:34Z INFO JobNotification] Entering EndMonitor
+[2025-06-09 16:53:34Z INFO MessageListener] Received job status event. JobState: Online
+[2025-06-09 16:53:49Z INFO ConfigurationStore] HasCredentials()
+[2025-06-09 16:53:49Z INFO ConfigurationStore] stored True
+[2025-06-09 16:53:49Z INFO CredentialManager] GetCredentialProvider
+[2025-06-09 16:53:49Z INFO CredentialManager] Creating type OAuth
+[2025-06-09 16:53:49Z INFO CredentialManager] Creating credential type: OAuth
+[2025-06-09 16:53:49Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file Z:\cloud-app\actions-runner\.credentials_rsaparams
+[2025-06-09 16:54:39Z INFO ConfigurationStore] HasCredentials()
+[2025-06-09 16:54:39Z INFO ConfigurationStore] stored True
+[2025-06-09 16:54:39Z INFO CredentialManager] GetCredentialProvider
+[2025-06-09 16:54:39Z INFO CredentialManager] Creating type OAuth
+[2025-06-09 16:54:39Z INFO CredentialManager] Creating credential type: OAuth
+[2025-06-09 16:54:39Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file Z:\cloud-app\actions-runner\.credentials_rsaparams
+[2025-06-09 16:55:30Z INFO ConfigurationStore] HasCredentials()
+[2025-06-09 16:55:30Z INFO ConfigurationStore] stored True
+[2025-06-09 16:55:30Z INFO CredentialManager] GetCredentialProvider
+[2025-06-09 16:55:30Z INFO CredentialManager] Creating type OAuth
+[2025-06-09 16:55:30Z INFO CredentialManager] Creating credential type: OAuth
+[2025-06-09 16:55:30Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file Z:\cloud-app\actions-runner\.credentials_rsaparams
+[2025-06-09 16:56:20Z INFO ConfigurationStore] HasCredentials()
+[2025-06-09 16:56:20Z INFO ConfigurationStore] stored True
+[2025-06-09 16:56:20Z INFO CredentialManager] GetCredentialProvider
+[2025-06-09 16:56:20Z INFO CredentialManager] Creating type OAuth
+[2025-06-09 16:56:20Z INFO CredentialManager] Creating credential type: OAuth
+[2025-06-09 16:56:20Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file Z:\cloud-app\actions-runner\.credentials_rsaparams
