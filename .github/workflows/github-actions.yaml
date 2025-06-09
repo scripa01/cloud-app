@@ -1,4 +1,4 @@
-name: Build and Push (latest)
+name: Build and Deploy to Local K8s
 
 on:
   push:
@@ -6,31 +6,55 @@ on:
   workflow_dispatch:
 
 env:
-  IMAGE_NAME: scripa01/cloud-app
-  TAG: latest
+  IMAGE_NAME: ${{ secrets.DOCKER_USERNAME }}/cloud-app
 
 jobs:
-  build-and-push:
-    runs-on: self-hosted
+  build-deploy:
+    runs-on: [self-hosted, Windows, X64]
+
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout source code
+        uses: actions/checkout@v3
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
 
       - name: Set up JDK 17
         uses: actions/setup-java@v3
         with:
-          distribution: 'temurin'
           java-version: '17'
+          distribution: 'temurin'
 
-      - name: Build with Gradle
-        run: ./gradlew build
+      - name: Build jar
+        run: .\gradlew.bat clean bootJar
 
-      - name: Log in to DockerHub
-        uses: docker/login-action@v2
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v3
         with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: Build and Push Docker image
+      - name: Set Docker image tag
+        id: tag
+        shell: powershell
         run: |
-          docker build -t ${env:IMAGE_NAME}:${env:TAG} .
-          docker push ${env:IMAGE_NAME}:${env:TAG}
+          $shortSha = "${{ github.sha }}".Substring(0,7)
+          echo "TAG=$shortSha" >> $env:GITHUB_ENV
+
+      - name: Build Docker image
+        shell: powershell
+        run: docker build -t cloud-app:$env:TAG .
+
+      - name: Tag for Docker Hub
+        shell: powershell
+        run: docker tag cloud-app:$env:TAG $IMAGE_NAME:$env:TAG
+
+      - name: Push to Docker Hub
+        shell: powershell
+        run: docker push $IMAGE_NAME:$env:TAG
+
+      - name: Update Kubernetes Deployment
+        shell: powershell
+        run: |
+          kubectl set image deployment/cloud-app cloud-app=$IMAGE_NAME:$env:TAG --record
+          kubectl rollout status deployment/cloud-app --timeout=120s
