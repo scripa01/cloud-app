@@ -8,6 +8,6 @@ class MainController {
 
     @GetMapping("/")
     fun main(): String {
-        return "Jun 9 2025 Hello World!"
+        return "Jun 9  2025 Hello World!"
     }
 }
