@@ -55,5 +55,5 @@ jobs:
         shell: powershell
 
       - name: Update Kubernetes deployment image
-        run: kubectl set image deployment/cloud-app cloud=${{ secrets.DOCKERHUB_USERNAME }}/cloud-app:$env:TAG
+        run: kubectl set image deployment/cloud-app cloud-app=${{ secrets.DOCKERHUB_USERNAME }}/cloud-app:$env:TAG
         shell: powershell
