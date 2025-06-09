@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 env:
-  IMAGE_NAME: ${{ secrets.DOCKER_USERNAME }}/cloud-app
+  IMAGE_NAME: ${{ secrets.DOCKERHUB_USERNAME }}/cloud-app
 
 jobs:
   build-deploy:
@@ -47,13 +47,13 @@ jobs:
         shell: powershell
 
       - name: Tag Docker image for Docker Hub
-        run: docker tag cloud-app:$env:TAG ${{ secrets.DOCKER_USERNAME }}/cloud-app:$env:TAG
+        run: docker tag cloud-app:$env:TAG ${{ secrets.DOCKERHUB_USERNAME }}/cloud-app:$env:TAG
         shell: powershell
 
       - name: Push Docker image
-        run: docker push ${{ secrets.DOCKER_USERNAME }}/cloud-app:$env:TAG
+        run: docker push ${{ secrets.DOCKERHUB_USERNAME }}/cloud-app:$env:TAG
         shell: powershell
 
       - name: Update Kubernetes deployment image
-        run: kubectl set image deployment/cloud-app cloud=${{ secrets.DOCKER_USERNAME }}/cloud-app:$env:TAG
+        run: kubectl set image deployment/cloud-app cloud=${{ secrets.DOCKERHUB_USERNAME }}/cloud-app:$env:TAG
         shell: powershell
