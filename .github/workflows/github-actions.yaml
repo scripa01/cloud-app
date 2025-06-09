@@ -6,15 +6,14 @@ on:
   workflow_dispatch:
 
 env:
-  IMAGE_NAME: ${{ secrets.DOCKER_USERNAME }}/cloud-app
+  IMAGE_NAME: cloud-app
 
 jobs:
   build-deploy:
     runs-on: [self-hosted, Windows, X64]
 
     steps:
-      - name: Checkout source code
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
@@ -43,18 +42,27 @@ jobs:
 
       - name: Build Docker image
         shell: powershell
-        run: docker build -t cloud-app:$env:TAG .
+        run: |
+          $tag = $env:TAG
+          docker build -t "$env:IMAGE_NAME:$tag" .
 
       - name: Tag for Docker Hub
         shell: powershell
-        run: docker tag cloud-app:$env:TAG $IMAGE_NAME:$env:TAG
+        run: |
+          $imageName = $env:IMAGE_NAME
+          $tag       = $env:TAG
+          docker tag "$imageName:$tag" "${{ secrets.DOCKERHUB_USERNAME }}/$imageName:$tag"
 
       - name: Push to Docker Hub
         shell: powershell
-        run: docker push $IMAGE_NAME:$env:TAG
+        run: |
+          $imageName = $env:IMAGE_NAME
+          $tag       = $env:TAG
+          docker push "${{ secrets.DOCKERHUB_USERNAME }}/$imageName:$tag"
 
       - name: Update Kubernetes Deployment
         shell: powershell
         run: |
-          kubectl set image deployment/cloud-app cloud-app=$IMAGE_NAME:$env:TAG --record
-          kubectl rollout status deployment/cloud-app --timeout=120s
+          $imageName = $env:IMAGE_NAME
+          $tag       = $env:TAG
+          kubectl set image deployment/cloud-app cloud-app="${{ secrets.DOCKERHUB_USERNAME }}/$imageName:$tag" --record
